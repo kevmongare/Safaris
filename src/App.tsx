@@ -46,7 +46,7 @@ function App() {
 
 
   {/* <!-- Hero Section --> */}
-  <section className="h-[60vh] bg-cover bg-center hero-bg flex items-center justify-center text-white text-center" >
+  <section className="h-screen bg-cover bg-center hero-bg flex items-center justify-center text-white text-center" >
     <div className="bg-black/60 bg-opacity-50 p-6 rounded">
       <h2 className="text-4xl font-bold mb-4">Your African Safari Adventure Starts Here</h2>
       <div className="space-x-4">
