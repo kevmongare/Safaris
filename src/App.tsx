@@ -8,6 +8,12 @@ import Diani from './assets/Diani-Sea-Lodge-copy.png'
 
 
 function App() {
+  //whatsapp
+  const phoneNumber = "254706384510"; 
+  const message = "Hello! I'm interested in your services.";
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  //packages
 
   const packages = [
   {
@@ -35,39 +41,72 @@ function App() {
 
   return (
     <>
-       {/* <!-- Header --> */}
-  <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-md">
+        <header className="sticky top-0 z-50 w-full bg-[#fefcf9]/90 backdrop-blur-md shadow-md">
         <div className="px-5 md:px-20 py-4 flex justify-between items-center">
-          <img src={Logo} alt="" className="md:h-15 h-10 mr-5" />
+          <img src={Logo} alt="Logo" className="md:h-16 h-10 mr-5" />
 
-          <nav className=" hidden md:flex absolute top-16 left-0 w-full bg-blue-950  md:bg-transparent md:static  md:space-x-6 md:items-center md:w-auto py-3 px-3 space-x-4"
-          id='menu'>
-            <a href="#" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Destinations</a>
-            <a href="#Overview" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Holiday Styles</a>
-            <a href="#" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Excursions</a>
-            <a href="#services" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Services</a>
-            <a href="#Aboutus" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Blog</a>
-            <a href="#contact" className="md:text-gray-900  text-white hover:text-[var(--primary)]">About Us</a>
-            <a href="#contact" className="md:text-gray-900  text-white hover:text-[var(--primary)]">Contact Us</a>
-            <a
-              href="#"
-              className="hidden md:block bg-[var(--primary)] hover:bg-[var(--primary)] text-white py-2 px-4 rounded-md text-sm font-medium"
-            >
+          <nav className="hidden md:flex absolute top-16 left-0 w-full bg-[#3a3a2c] md:bg-transparent md:static md:space-x-6 md:items-center md:w-auto py-3 px-3 space-x-4 font-['Playfair Display']">
+            {/* DESTINATIONS DROPDOWN */}
+            <div className="group relative">
+              <a href="#" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Destinations</a>
+              <div className="absolute top-full left-0 hidden group-hover:grid grid-cols-2 gap-4 bg-white shadow-lg rounded-sm p-4 w-[600px] z-50">
+                <div>
+                  <img src={savanah} alt="Kenya" className="rounded-md mb-2 h-24 w-full object-cover" />
+                  <p className="text-sm text-black font-semibold">Kenya</p>
+                </div>
+                <div>
+                  <img src={wildlife} alt="Tanzania" className="rounded-md mb-2 h-24 w-full object-cover" />
+                  <p className="text-sm text-black font-semibold">Tanzania</p>
+                </div>
+                <div>
+                  <img src={desert} alt="Zanzibar" className="rounded-md mb-2 h-24 w-full object-cover" />
+                  <p className="text-sm text-black font-semibold">Zanzibar</p>
+                </div>
+                <div>
+                  <img src={Diani} alt="South Africa" className="rounded-md mb-2 h-24 w-full object-cover" />
+                  <p className="text-sm text-black font-semibold">South Africa</p>
+                </div>
+              </div>
+            </div>
+
+            {/* HOLIDAY STYLES DROPDOWN */}
+            <div className="group relative">
+              <a href="#Overview" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Holiday Styles</a>
+              <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-lg rounded-sm p-4 w-64 z-50">
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Luxury Tented Camps</a>
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Beach & Bush</a>
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Family Safaris</a>
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Honeymoon</a>
+              </div>
+            </div>
+
+            {/* EXCURSIONS DROPDOWN */}
+            <div className="group relative">
+              <a href="#" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Excursions</a>
+              <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-lg rounded-sm p-4 w-64 z-50">
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Balloon Safari</a>
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Cultural Tours</a>
+                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">City Day Trips</a>
+              </div>
+            </div>
+
+            <a href="#services" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Services</a>
+            <a href="#Aboutus" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Blog</a>
+            <a href="#contact" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">About Us</a>
+            <a href="#contact" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Contact Us</a>
+            <a href="#packages" className="hidden md:block bg-[var(--primary)] hover:bg-[#b19450] text-white py-2 px-4 rounded-md text-sm font-medium">
               View Packages
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="border border-[var(--primary)] rounded-full py-1 px-4 hover:bg-[var(--primary)] hover:text-white"
-            id='menu-btn'>
+            <button className="border border-[var(--primary)] rounded-full py-1 px-4 hover:bg-[var(--primary)] hover:text-white">
               Menu
             </button>
           </div>
         </div>
       </header>
-
-
 
   {/* <!-- Hero Section --> */}
   <section className="h-screen bg-cover bg-center hero-bg flex items-center justify-center text-white text-center" >
@@ -149,6 +188,23 @@ function App() {
       <button type="submit" className="bg-[var(--primary)] text-white px-4 py-2 rounded">Send Message</button>
     </form>
   </section>
+
+  {/* contaact Us */}
+       <a
+      href={whatsappURL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-10 right-10 z-50 bg-[var(--secondary)] text-white rounded-full p-4 shadow-lg hover:bg-orange-600  transition  animate-pulse"
+    >
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-6 h-6 md:w-8 md:h-8"
+      >
+        <path d="M12.04 2.01A10 10 0 0 0 2 12.06a9.84 9.84 0 0 0 1.37 5.09L2 22l5.07-1.33a9.95 9.95 0 0 0 4.96 1.28H12A10 10 0 0 0 12.04 2zM12 20.08a8.07 8.07 0 0 1-4.1-1.13l-.3-.17-3.02.79.8-2.94-.2-.31a8.04 8.04 0 1 1 14.9-4.27 8.03 8.03 0 0 1-8.08 8.03zm4.62-6.03c-.26-.13-1.5-.74-1.73-.83s-.4-.13-.57.13-.66.83-.81 1-.3.2-.56.07a6.6 6.6 0 0 1-1.94-1.2 7.4 7.4 0 0 1-1.37-1.7c-.14-.26 0-.4.12-.53.12-.13.26-.3.4-.45.14-.15.2-.26.3-.43a.5.5 0 0 0-.02-.48c-.07-.14-.57-1.37-.78-1.87s-.4-.42-.56-.43h-.48a.92.92 0 0 0-.67.31 2.78 2.78 0 0 0-.86 2.06c0 1.22.87 2.4 1 2.57.13.17 1.7 2.6 4.13 3.64.58.25 1.04.4 1.4.51a3.35 3.35 0 0 0 1.56.1 2.66 2.66 0 0 0 1.75-1.22c.22-.3.22-.54.16-.74s-.24-.17-.5-.3z" />
+      </svg>
+    </a>
 
   {/* <!-- Footer --> */}
   <footer className="bg-[var(--primary)] text-white p-6 mt-12 ">
