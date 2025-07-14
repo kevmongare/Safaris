@@ -4,9 +4,33 @@ import savanah from './assets/savannah-landscape-in-the-national-park-of-kenya-P
 import desert from './assets/Nyiri-desert.webp'
 import wildlife from './assets/wildlife.jpg'
 import Logo from './assets/logo.png'
+import Diani from './assets/Diani-Sea-Lodge-copy.png'
 
 
 function App() {
+
+  const packages = [
+  {
+    title: "10 Days 9 Nights China Canton Fair Package 2025",
+    duration: "10 DAYS / 9 NIGHTS",
+    image: savanah,
+  },
+  {
+    title: "Dubai Christmas Packages 2024",
+    duration: "5 DAYS / 4 NIGHTS",
+    image: desert,
+  },
+  {
+    title: "7 Days 6 Nights 2024 Thailand Christmas Holidays",
+    duration: "7 DAYS / 6 NIGHTS",
+    image: wildlife,
+  },
+  {
+    title: "6 Days 5 Nights Christmas In Dubai",
+    duration: "6 DAYS / 5 NIGHTS",
+    image: Diani,
+  },
+];
   
 
   return (
@@ -93,6 +117,46 @@ Let us turn your African dream into a once-in-a-lifetime memory. Experience the 
   </div>
 </section>
 
+  {/* Packages */}
+
+  <section className="py-16 px-4 max-w-7xl mx-auto text-center">
+      <h2 className="text-4xl font-bold text-gray-800 mb-2">
+        Recommended <span style={{ color: "#056608" }}>Themed</span> Packages
+      </h2>
+      <p className="text-gray-500 mb-10 max-w-xl mx-auto">
+        Leading tour and travels booking website. Over 3,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience
+      </p>
+
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {packages.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-4 text-left">
+              <h3 className="font-semibold text-gray-800 text-sm mb-1">
+                {item.title}
+              </h3>
+              <p className="text-xl font-bold text-gray-800 mb-4">
+                {item.duration}
+              </p>
+              <button
+                className="text-white text-sm px-4 py-2 rounded"
+                style={{ backgroundColor: "#056608" }}
+              >
+                MORE INFO
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
   {/* about */}
   <section className="bg-[#fdfbf7] py-24 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between min-h-[60vh]">
   {/* <!-- Left Column --> */}
@@ -134,6 +198,8 @@ Let us turn your African dream into a once-in-a-lifetime memory. Experience the 
       </div>
     </div>
   </section>
+
+
 
   {/* <!-- Gallery Section --> */}
   {/* <section className="p-8 bg-gray-50" id="gallery">
