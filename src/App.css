@@ -1,6 +1,7 @@
 @import "tailwindcss";
 :root{
-  --primary: #056608;
+  --background:-#c2a75c;
+  --primary: #3a3a2c;
 }
 .hero-bg {
   background-image: url('./assets/masai-mara-wildlife.jpg');
