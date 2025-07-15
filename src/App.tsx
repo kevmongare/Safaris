@@ -2,12 +2,21 @@
 import './App.css'
 import savanah from './assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import desert from './assets/Nyiri-desert.webp'
+import bg from './assets/villa-2-beautiful-bedouin.jpg'
 import wildlife from './assets/wildlife.jpg'
 import Logo from './assets/logo.png'
 import Diani from './assets/Diani-Sea-Lodge-copy.png'
 
+//slides
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+
+import 'swiper/swiper-bundle.css'; 
+
 
 function App() {
+  
   //whatsapp
   const phoneNumber = "254706384510"; 
   const message = "Hello! I'm interested in your services.";
@@ -41,83 +50,111 @@ function App() {
 
   return (
     <>
-        <header className="sticky top-0 z-50 w-full bg-[#fefcf9]/90 backdrop-blur-md shadow-md">
+     {/* HEADER WITH MEGA MENU DROPDOWN */}
+      <header className="sticky top-0 z-50 w-full bg-[#fefcf9]/90 backdrop-blur-md shadow-md">
         <div className="px-5 md:px-20 py-4 flex justify-between items-center">
           <img src={Logo} alt="Logo" className="md:h-16 h-10 mr-5" />
 
-          <nav className="hidden md:flex absolute top-16 left-0 w-full bg-[#3a3a2c] md:bg-transparent md:static md:space-x-6 md:items-center md:w-auto py-3 px-3 space-x-4 font-['Playfair Display']">
-            {/* DESTINATIONS DROPDOWN */}
+          <nav className="hidden md:flex absolute top-16 left-0 w-full bg-white md:bg-transparent md:static md:items-center md:w-auto py-3 px-3 font-['Playfair Display']">
+            {/* EXPERIENCES - MEGA MENU */}
             <div className="group relative">
-              <a href="#" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Destinations</a>
-              <div className="absolute top-full left-0 hidden group-hover:grid grid-cols-2 gap-4 bg-white shadow-lg rounded-sm p-4 w-[600px] z-50">
-                <div>
-                  <img src={savanah} alt="Kenya" className="rounded-md mb-2 h-24 w-full object-cover" />
-                  <p className="text-sm text-black font-semibold">Kenya</p>
+              <a href="#" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Experiences ▾</a>
+              <div className="absolute top-full left-0 hidden group-hover:flex bg-white shadow-2xl rounded-lg p-8 w-[900px] justify-between z-50">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-bold text-gray-600 mb-2">EXPERIENCES</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>Beach and Bush</li>
+                    <li>Exclusive Kenya Safari</li>
+                    <li>Fossil Hunting</li>
+                    <li>Into the Heart of Africa</li>
+                    <li>Lion King Adventure</li>
+                    <li>Masai Mara Migration</li>
+                    <li>Photographic Safari</li>
+                  </ul>
                 </div>
-                <div>
-                  <img src={wildlife} alt="Tanzania" className="rounded-md mb-2 h-24 w-full object-cover" />
-                  <p className="text-sm text-black font-semibold">Tanzania</p>
+
+                <div className="space-y-2">
+                  <h4 className="text-sm font-bold text-gray-600 mb-2">EXPERIENCES</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>Private Guided Safaris</li>
+                    <li>Reconnect to the Wilderness</li>
+                    <li>Safari Teaser</li>
+                    <li>Wellness & Wilderness</li>
+                    <li>Week of Wild Adventure</li>
+                    <li>Ultimate Giraffe Safari</li>
+                    <li>Helicopter Tours</li>
+                  </ul>
                 </div>
-                <div>
-                  <img src={desert} alt="Zanzibar" className="rounded-md mb-2 h-24 w-full object-cover" />
-                  <p className="text-sm text-black font-semibold">Zanzibar</p>
+
+                <div className="space-y-2">
+                  <h4 className="text-sm font-bold text-gray-600 mb-2">HELI-TOURS</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>Cycads & Elephants</li>
+                    <li>Jewels of the North</li>
+                    <li>Peaks & Lakes</li>
+                    <li>Pink Flamingos</li>
+                  </ul>
                 </div>
-                <div>
-                  <img src={Diani} alt="South Africa" className="rounded-md mb-2 h-24 w-full object-cover" />
-                  <p className="text-sm text-black font-semibold">South Africa</p>
+
+                <div className="ml-6">
+                  <h4 className="text-sm font-bold text-gray-600 mb-2">DISCOVER</h4>
+                  <img
+                    src={savanah}
+                    alt="Explore Kenya"
+                    className="rounded-lg h-32 object-cover mb-2"
+                  />
+                  <button className="text-sm border border-[#c2a75c] text-[#c2a75c] px-3 py-1 rounded hover:bg-[#c2a75c] hover:text-white">
+                    Learn More
+                  </button>
                 </div>
               </div>
             </div>
 
-            {/* HOLIDAY STYLES DROPDOWN */}
-            <div className="group relative">
-              <a href="#Overview" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Holiday Styles</a>
-              <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-lg rounded-sm p-4 w-64 z-50">
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Luxury Tented Camps</a>
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Beach & Bush</a>
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Family Safaris</a>
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Honeymoon</a>
-              </div>
-            </div>
+            {/* Other Menus */}
+            <a href="#Overview" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Holiday Styles</a>
+            <a href="#excursions" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Excursions</a>
+            <a href="#services" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Services</a>
+            <a href="#Aboutus" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Blog</a>
+            <a href="#about" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">About</a>
+            <a href="#contact" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Contact</a>
 
-            {/* EXCURSIONS DROPDOWN */}
-            <div className="group relative">
-              <a href="#" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Excursions</a>
-              <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-lg rounded-sm p-4 w-64 z-50">
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Balloon Safari</a>
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">Cultural Tours</a>
-                <a href="#" className="text-sm text-black font-medium py-1 hover:text-[var(--primary)]">City Day Trips</a>
-              </div>
-            </div>
-
-            <a href="#services" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Services</a>
-            <a href="#Aboutus" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Blog</a>
-            <a href="#contact" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">About Us</a>
-            <a href="#contact" className="md:text-[#1a1a1a] text-white hover:text-[var(--primary)]">Contact Us</a>
-            <a href="#packages" className="hidden md:block bg-[var(--primary)] hover:bg-[#b19450] text-white py-2 px-4 rounded-md text-sm font-medium">
+            <a href="#packages" className="ml-auto bg-[#7c3e2d] text-white py-2 px-6 rounded hover:opacity-90">
               View Packages
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <div className="md:hidden">
-            <button className="border border-[var(--primary)] rounded-full py-1 px-4 hover:bg-[var(--primary)] hover:text-white">
+            <button className="border border-[#c2a75c] rounded-full py-1 px-4 hover:bg-[#c2a75c] hover:text-white">
               Menu
             </button>
           </div>
         </div>
       </header>
+        
 
   {/* <!-- Hero Section --> */}
-  <section className="h-screen bg-cover bg-center hero-bg flex items-center justify-center text-white text-center" >
-    <div className="bg-black/60 bg-opacity-50 p-6 rounded">
-      <h2 className="text-4xl font-bold mb-4">Your African Safari Adventure Starts Here</h2>
-      <div className="space-x-4">
-        <button className="bg-yellow-600 px-4 py-2 rounded">Our Packages</button>
-        <button className="bg-transparent border border-white px-4 py-2 rounded">Contact Agent</button>
-      </div>
-    </div>
-  </section>
+  <section className="relative">
+      <Swiper
+  modules={[Autoplay, Pagination, Navigation]}
+  autoplay={{ delay: 4000 }}
+  loop={true}
+  navigation
+  pagination={{ clickable: true }}
+  className="h-[85vh]"
+>
+        {[wildlife, bg].map((img, idx) => (
+          <SwiperSlide key={idx}>
+            <div
+              className="h-screen bg-fixed bg-cover bg-center flex items-center justify-start text-white"
+              style={{ backgroundImage: `url(${img})` }}
+            >
+            </div>
+             
+          </SwiperSlide>
+        ))}
+      </Swiper>
+       </section>
   {/* other */}
     {/* about */}
   <section className="shadow-sm bg-[#fdfbf7] py-24 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between min-h-[60vh]">
@@ -153,12 +190,12 @@ function App() {
         {packages.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition"
+            className="bg-white shadow-xl  overflow-hidden  transition"
           >
             <img
               src={item.image}
               alt={item.title}
-              className="h-56 w-full object-cover"
+              className="h-56 w-full object-cover hover:scale-105"
             />
             <div className="p-4 text-left">
               <h3 className="font-semibold text-gray-800 text-sm mb-1">
@@ -168,7 +205,7 @@ function App() {
                 {item.duration}
               </p>
               <button
-                className="text-white text-sm px-4 py-2 rounded bg-[var(--primary)]">
+                className="text-white text-sm px-4 py-2 rounded-lg bg-[var(--primary)]">
                 MORE INFO
               </button>
             </div>

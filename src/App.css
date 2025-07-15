@@ -10,3 +10,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--secondary)!important;
+}
+.swiper-pagination-bullet-active {
+  background: white !important;     /* Active bullet stays white */
+  opacity: 1;                       /* Fully visible when active */
+}
