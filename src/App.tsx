@@ -2,12 +2,12 @@
 import './App.css'
 import savanah from './assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import desert from './assets/Nyiri-desert.webp'
-import bg from './assets/villa-2-beautiful-bedouin.jpg'
+// import bg from './assets/villa-2-beautiful-bedouin.jpg'
 import wildlife from './assets/elephant.avif'
 import Cheetah from './assets/wildlife.jpg'
-import Giraff from './assets/masai-mara-wildlife.jpg'
+// import Giraff from './assets/masai-mara-wildlife.jpg'
 import Logo from './assets/logo.png'
-import Diani from './assets/Diani-Sea-Lodge-copy.png'
+// import Diani from './assets/Diani-Sea-Lodge-copy.png'
 // import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
 
