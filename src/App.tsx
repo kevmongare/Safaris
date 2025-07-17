@@ -240,9 +240,9 @@ function App() {
               <h3 className="font-semibold text-gray-800 text-sm mb-1">
                 {item.title}
               </h3>
-              <p className="text-xl font-bold text-gray-800 mb-4">
+              {/* <p className="text-xl font-bold text-gray-800 mb-4">
                 {item.duration}
-              </p>
+              </p> */}
               <button
                 className="text-white text-sm px-4 py-2 rounded-lg bg-[var(--button)]">
                 View Package
