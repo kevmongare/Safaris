@@ -3,9 +3,13 @@ import './App.css'
 import savanah from './assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import desert from './assets/Nyiri-desert.webp'
 import bg from './assets/villa-2-beautiful-bedouin.jpg'
-import wildlife from './assets/wildlife.jpg'
+import wildlife from './assets/elephant.avif'
+import Cheetah from './assets/wildlife.jpg'
+import Giraff from './assets/masai-mara-wildlife.jpg'
 import Logo from './assets/logo.png'
 import Diani from './assets/Diani-Sea-Lodge-copy.png'
+// import { CheckCircleIcon } from '@heroicons/react/24/solid'
+
 
 //slides
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,6 +20,40 @@ import 'swiper/swiper-bundle.css';
 
 
 function App() {
+
+  //price comparison
+   const safariPackages = [
+    {
+      title: '4 Day Uganda Fly-in Gorilla Safari',
+      image: wildlife, 
+      price: 1000,
+      details: [
+        '1 Night in Entebbe',
+        '2 Nights in Bwindi Impenetrable Forest',
+        'All meals & House drinks at your Bwindi accommodation',
+        'Gorilla Trekking in Bwindi Impenetrable Forest',
+        'Community tour that includes a visit to a coffee farm',
+        'Flight from Entebbe to Kisoro',
+        'Ground transportation by 4x4 Safari Land Cruiser',
+        'English speaking Driver/Guide',
+        'Gorilla tracking permits',
+      ],
+    },
+    {
+      title: '3-Day All Inclusive Fly-in Gorilla Safari',
+      image: Cheetah,
+      price: 1340,
+      details: [
+        '2 nights at Nkuringo Bwindi Gorilla Lodge',
+        'All meals & House drinks at your Bwindi accommodation',
+        'Gorilla Trekking in Bwindi Impenetrable Forest',
+        'Gorilla tracking permits',
+        'Flight from Entebbe to Kisoro',
+        'Ground transportation by 4x4 Safari Land Cruiser',
+        'English speaking Driver/Guide',
+      ],
+    },
+  ]
   
   //whatsapp
   const phoneNumber = "254706384510"; 
@@ -27,23 +65,23 @@ function App() {
   const packages = [
   {
     title: "10 Days 9 Nights China Canton Fair Package 2025",
-    duration: "10 DAYS / 9 NIGHTS",
+    
     image: savanah,
   },
   {
     title: "Dubai Christmas Packages 2024",
-    duration: "5 DAYS / 4 NIGHTS",
+   
     image: desert,
   },
   {
     title: "7 Days 6 Nights 2024 Thailand Christmas Holidays",
-    duration: "7 DAYS / 6 NIGHTS",
+   
     image: wildlife,
   },
   {
     title: "6 Days 5 Nights Christmas In Dubai",
-    duration: "6 DAYS / 5 NIGHTS",
-    image: Diani,
+    
+    image: Cheetah,
   },
 ];
   
@@ -118,7 +156,7 @@ function App() {
             <a href="#about" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">About</a>
             <a href="#contact" className="text-[#3a3a2c] font-semibold hover:text-[#c2a75c] px-4">Contact</a>
 
-            <a href="#packages" className="ml-auto bg-[#7c3e2d] text-white py-2 px-6 rounded hover:opacity-90">
+            <a href="#packages" className="ml-auto bg-[var(--button)] text-white py-2 px-6 rounded hover:opacity-90">
               View Packages
             </a>
           </nav>
@@ -141,14 +179,15 @@ function App() {
   loop={true}
   navigation
   pagination={{ clickable: true }}
-  className="h-[85vh]"
+  className="h-screen"
 >
-        {[wildlife, bg].map((img, idx) => (
+        {[wildlife,Cheetah].map((img, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="h-screen bg-fixed bg-cover bg-center flex items-center justify-start text-white"
               style={{ backgroundImage: `url(${img})` }}
             >
+              <h1 className='font-bold text-6xl px-25'>Experience <br/> Africa</h1>
             </div>
              
           </SwiperSlide>
@@ -186,11 +225,11 @@ function App() {
         Leading tour and travels booking website. Over 3,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience
       </p>
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
         {packages.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-xl  overflow-hidden  transition"
+            className="overflow-hidden  transition bg-[var(--background)] shadow-sm hover:shadow-lg "
           >
             <img
               src={item.image}
@@ -205,14 +244,71 @@ function App() {
                 {item.duration}
               </p>
               <button
-                className="text-white text-sm px-4 py-2 rounded-lg bg-[var(--primary)]">
-                MORE INFO
+                className="text-white text-sm px-4 py-2 rounded-lg bg-[var(--button)]">
+                View Package
               </button>
             </div>
           </div>
         ))}
       </div>
     </section>
+
+    {/* price comparison */}
+
+    <section className="bg-gray-50 py-16 px-6 md:px-20 ">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)]">
+          Post-trip Gorilla Trekking In Uganda
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        {safariPackages.map((pkg, idx) => (
+          <div
+            key={idx}
+            className="bg-white shadow-lg  overflow-hidden flex flex-col"
+          >
+            <img
+              src={pkg.image}
+              alt={pkg.title}
+              className="w-full h-64 object-cover"
+            />
+
+            <div className="p-6 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  {pkg.title}
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-700 mb-6">
+                  {pkg.details.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      {/* <CheckCircleIcon className="text-green-600 w-4 h-4 mt-1" /> */}
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex items-end justify-between mt-auto">
+                <div>
+                  <p className="text-[var(--secondary)]] font-bold text-xl">
+                    ${pkg.price} USD
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    Per person per night
+                  </p>
+                </div>
+                <button className="bg-[var(--button)] text-white px-5 py-2 rounded-md hover:bg-gray-800 text-sm">
+                  View Safari
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    
 
 
   {/* <!-- Contact Section --> */}

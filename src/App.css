@@ -1,9 +1,21 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap');
+
 :root{
   --background:#f9f7f2;
   --primary: #3a3a2c;
   --secondary:#c2a75c;
+  --button:#7c3e2d;
 }
+h1, h2, h3, body, p, span, button, a {
+  font-family: 'Playfair Display', serif !important;
+}
+/* 
+body, p, span, button, a {
+  font-family: 'Poppins', sans-serif !important;
+} */
+
+
 .hero-bg {
   background-image: url('./assets/masai-mara-wildlife.jpg');
   background-size: cover;
