@@ -1,5 +1,5 @@
 import Logo from '../assets/logo.png'
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import savanah from '../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import Lodge from '../assets/villa-2-beautiful-bedouin.jpg'
 export default function Menu(){

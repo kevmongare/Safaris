@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Lodge from '../assets/villa-2-beautiful-bedouin.jpg'
 import Safari from '../assets/safaris.webp'
 import SafariTruck from '../assets/safaris.jpeg'
