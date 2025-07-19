@@ -27,7 +27,7 @@ function App() {
        <PackageCard />
        <Whatsapp />
         <Blog />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
         
         {/* <Details /> */}

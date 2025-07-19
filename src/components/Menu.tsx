@@ -81,7 +81,7 @@ export default function Menu(){
         
                 {/* CAMP & LODGES - DROPDOWN */}
                 <div className="group relative">
-                  <a href="#" className="px-4 text-lg hover:text-[var(--primary)] transition">Camp & Lodges ▾</a>
+                  <a href="#" className="px-4 text-lg hover:text-[var(--primary)] transition">Travel Styles▾</a>
                   <div className="absolute top-full left-0 hidden group-hover:flex bg-white shadow-2xl p-8 w-[400px] justify-between z-50">
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li><a href="#" className="hover:text-[var(--primary)]">Luxury Camps</a></li>
