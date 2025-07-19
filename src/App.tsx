@@ -5,7 +5,7 @@ import AboutUs from './components/aboutUs';
 // import Details from './components/details';
 import PackageCard from './components/packagescard'
 import Hero from './components/hero';
-import Contact from './components/contact';
+// import Contact from './components/contact';
 import Footer from './components/footer'
 import './App.css'
 // import { FaEnvelope, FaPhone } from 'react-icons/fa';
