@@ -76,7 +76,7 @@ const packageDetails = {
 };
 
 export default function PackageDetails() {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   return (
     <>
