@@ -2,8 +2,9 @@ import Menu from './components/Menu';
 import Blog from '../src/components/blog';
 import Whatsapp from './components/whatsapp'
 import AboutUs from './components/aboutUs';
+import Cards from './components/titleCards';
 // import Details from './components/details';
-import PackageCard from './components/packagescard'
+// import PackageCard from './components/packagescard'
 import Hero from './components/hero';
 // import Contact from './components/contact';
 import Footer from './components/footer'
@@ -24,7 +25,8 @@ function App() {
       <Menu />
       <Hero />
        <AboutUs />
-       <PackageCard />
+       <Cards />
+       {/* <PackageCard /> */}
        <Whatsapp />
         <Blog />
         {/* <Contact /> */}
