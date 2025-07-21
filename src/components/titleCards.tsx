@@ -1,5 +1,5 @@
-import wildlife from './assets/elephant.avif'
-import Cheetah from './assets/wildlife.jpg'
+import wildlife from '../assets/elephant.avif'
+import Cheetah from '../assets/wildlife.jpg'
 
 export default function priceCards(){
     //price comparison
@@ -40,9 +40,9 @@ export default function priceCards(){
         <>
         {/* price comparison */}
 
-    <section className="bg-gray-50 py-16 px-6 md:px-20 ">
+    <section className="bg-[var(--secondary)] py-16 px-6 md:px-20 ">
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)]">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
           Post-trip Gorilla Trekking In Uganda
         </h2>
       </div>
@@ -83,7 +83,7 @@ export default function priceCards(){
                     Per person per night
                   </p>
                 </div>
-                <button className="bg-[var(--button)] text-white px-5 py-2 rounded-md hover:bg-gray-800 text-sm">
+                <button className="bg-[var(--secondary)] text-white px-5 py-2 rounded-md hover:bg-gray-800 text-sm">
                   View Safari
                 </button>
               </div>
