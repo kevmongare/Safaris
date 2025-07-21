@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import MasaiMara from '../assets/masai-mara-wildlife.jpg'
 import NairobiLodge from '../assets/villa-2-beautiful-bedouin.jpg'
 import Nairobitruck from '../assets/safaris.jpeg'
