@@ -19,7 +19,7 @@ export default function Menu(){
         <>
         <header
               className={`fixed top-0 left-0 w-full z-50  transition-all duration-300 ${
-                scrolled ? 'bg-white shadow-md text-[#3a3a2c]' : 'bg-white/70 shadow-md text-[#3a3a2c]'
+                scrolled ? 'bg-white shadow-md text-[#3a3a2c]' : 'bg-white shadow-md text-[#3a3a2c]'
               }`}
             >
                <div className="px-5 md:px-20 py-4 flex justify-between items-center">
