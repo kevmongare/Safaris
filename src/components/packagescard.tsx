@@ -3,76 +3,59 @@ import desert from '../assets/Nyiri-desert.webp'
 import wildlife from '../assets/elephant.avif'
 import Cheetah from '../assets/wildlife.jpg'
 
+export default function PackagesCard() {
+  const packages = [
+    {
+      title: "10 Days 9 Nights China Canton Fair Package 2025",
+      image: savanah,
+    },
+    {
+      title: "Dubai Christmas Packages 2024",
+      image: desert,
+    },
+    {
+      title: "7 Days 6 Nights 2024 Thailand Christmas Holidays",
+      image: wildlife,
+    },
+    {
+      title: "6 Days 5 Nights Christmas In Dubai",
+      image: Cheetah,
+    },
+  ];
 
-export default function packagesCard(){
-    //packages
-    
-      const packages = [
-      {
-        title: "10 Days 9 Nights China Canton Fair Package 2025",
-        
-        image: savanah,
-      },
-      {
-        title: "Dubai Christmas Packages 2024",
-       
-        image: desert,
-      },
-      {
-        title: "7 Days 6 Nights 2024 Thailand Christmas Holidays",
-       
-        image: wildlife,
-      },
-      {
-        title: "6 Days 5 Nights Christmas In Dubai",
-        
-        image: Cheetah,
-      },
-    ];
-      
-    return(
-        <>
-         {/* packages */}
-  <div className=' mx-auto text-center px-10  relative z-10'>
-    <section className="py-16 px-4 max-w-7xl mx-auto text-center">
-      <div className='bg-white/95 shadow-sm pt-5 pb-5 mb-10 rounded-t-xl'>
-        <h2 className="text-4xl font-bold text-gray-800 mb-2">
-          Recommended <span className='text-[var(--primary)]'>Themed</span> Packages
+  return (
+    <div className="bg-[#8c8479] py-16 px-6 text-center">
+      <section className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">
+          Recommended <span className="text-[var(--primary)]">Themed</span> Packages
         </h2>
-        <p className="text-gray-500 mb-10 max-w-xl mx-auto">
-          Leading tour and travels booking website. Over 3,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience
+        <p className="text-gray-200 mb-12 max-w-2xl mx-auto font-light">
+          Leading tour and travels booking website. Over 3,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience.
         </p>
-      </div>
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 z-20">
-        {packages.map((item, index) => (
-          <div
-            key={index}
-            className="overflow-hidden  transition bg-[var(--background)]/25"
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="h-56 w-full object-cover hover:scale-115"
-            />
-            <div className="p-4 text-left">
-              <h3 className="font-medium text-gray-50 text-2xl mb-1">
-                {item.title}
-              </h3>
-              
-              <button
-                className="text-white text-sm px-4 py-2 rounded-lg bg-[var(--primary)]">
-                View Package
-              </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {packages.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white  shadow-md overflow-hidden transition hover:shadow-lg"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div className="p-5 text-left">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {item.title}
+                </h3>
+                <button className="mt-2 border border-[#8c8479] text-[#8c8479] px-4 py-2 rounded hover:bg-[#8c8479] hover:text-white transition">
+                  View Package
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section> 
-  </div>
-
-  {/* Packages */}
-        
-        </>
-    )
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }
