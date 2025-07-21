@@ -2,11 +2,8 @@ export default function aboutUs(){
     return(
         <>
          {/* about */}
-  <section className="shadow-sm  px-6 md:px-16 min-h-[60vh]">
-    <div className=' mx-auto text-center -mt-15 py-10 px-10  max-w-3xl relative z-10 bg-white/90 shadow-md rounded-sm'>
-      <h1 className="text-3xl font-bold">Viagens Africa Safaris </h1>
-    </div>
-  <div className="flex flex-col md:flex-row items-center justify-between  py-24">
+  
+  <div className="flex flex-col md:flex-row items-baseline justify-between px-20 py-15">
     {/* <!-- Left Column --> */}
     <div className="md:w-1/2 mb-10 md:mb-0">
       <h1 className="text-5xl md:text-6xl font-extrabold  pt-20 text-white">
@@ -23,7 +20,7 @@ export default function aboutUs(){
       </button>
     </div>
   </div>
-</section>
+
         </>
     );
 }
