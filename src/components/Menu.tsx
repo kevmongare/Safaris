@@ -23,7 +23,7 @@ export default function Menu(){
               }`}
             >
                <div className="px-5 md:px-20 py-4 flex justify-between items-center">
-          <img src={Logo} alt="Logo" className="bg-white/75 rounded-full md:h-16 h-10 mr-5" />
+          <img src={Logo} alt="Logo" className="rounded-full md:h-16 h-10 mr-5" />
         
           {/* Main Navigation */}
           <nav className="hidden md:flex absolute top-16 left-0 w-full bg-white md:bg-transparent md:static md:items-center md:w-auto py-3 px-3 font-['Playfair Display']">
