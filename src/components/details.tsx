@@ -5,24 +5,25 @@ export default function FocusSafariSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10 ">
         {/* Text Section */}
         <div>
+          <h1 className='text-[var(--primary)] -mt-10 mb-5 underline'>Experience the Extraordinary</h1>
           <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-            Focus on{" "}
+            Viagens Africa {" "}
             <span className="relative inline-block">
-              safari
+              Safaris 
               <span className="absolute left-0 bottom-1 w-full h-2 bg-yellow-400 -z-10"></span>
             </span>
           </h2>
           <p className="text-lg text-gray-800 space-y-4">
-            We know wildlife is the heart of your safari, and at Tor’s Camp, we
-            make it our priority. That’s why every guest enjoys a{" "}
+            We know wildlife is the heart of your safari,<span className="underline decoration-yellow-400 font-bold"> Viagens Africa Safaris </span> is a dynamic and a fast growing Tours and Ticketing Company. That’s why every guest enjoys a{" "}
+            
+              private and professional local guide
+            
+            , giving you the freedom to tailor your game drives.We{" "}
             <span className="underline decoration-yellow-400">
-              private 4x4 vehicle and professional local guide
-            </span>
-            , giving you the freedom to tailor your game drives. Our{" "}
-            <span className="underline decoration-yellow-400">
-              unbeatable location
+              offer off the beaten track 
             </span>{" "}
-            in one of the most predator-rich areas of the Maasai Mara ensures{" "}
+            – Inbound and Outbound travel products.
+            {/* {" "}
             <span className="underline decoration-yellow-400">
               incredible big cat sightings
             </span>
@@ -30,7 +31,7 @@ export default function FocusSafariSection() {
             <span className="underline decoration-yellow-400">
               exploring the wild
             </span>{" "}
-            and less time worrying about anything else.
+            and less time worrying about anything else. */}
           </p>
         </div>
          {/* Image from earlier URL */}
