@@ -3,12 +3,12 @@ import Blog from '../src/components/blog';
 import Whatsapp from './components/whatsapp'
 import AboutUs from './components/aboutUs';
 // import Cards from './components/titleCards';
-// import Destinations from './components/Destinations';
+import Destinations from './components/Destinations';
 import Details from './components/details';
-// import DestinationHighlights from './components/DestinationHighlights';
+import DestinationHighlights from './components/DestinationHighlights';
 // import PackageCard from './components/packagescard'
 import Hero from './components/hero';
-// import Contact from './components/contact';
+import Contact from './components/contact';
 import Footer from './components/footer'
 import './App.css'
 // import { FaEnvelope, FaPhone } from 'react-icons/fa';
@@ -27,19 +27,20 @@ function App() {
       <Menu />
       <Hero />
        <Details />
-       {/* <Destinations />
+       <Destinations />
        <DestinationHighlights />
        
-        */}
+       
        
        {/* <Cards /> */}
        {/* <PackageCard /> */}
        
        
        <Whatsapp />
+       <AboutUs />
         <Blog />
-        <AboutUs />
-        {/* <Contact /> */}
+        
+        <Contact />
         <Footer />
         
         
