@@ -2,7 +2,7 @@ import Menu from './components/Menu';
 import Blog from '../src/components/blog';
 import Whatsapp from './components/whatsapp'
 import AboutUs from './components/aboutUs';
-import Destinations from './components/Destinations';
+import TopDestinations from './components/TopDestinations';
 import About from './components/About';
 import DestinationHighlights from './components/DestinationHighlights';
 import Hero from './components/hero';
@@ -25,7 +25,7 @@ function App() {
       <Menu />
       <Hero />
        <About />
-       <Destinations />
+       <TopDestinations />
        <DestinationHighlights />
        <Whatsapp />
        <AboutUs />
