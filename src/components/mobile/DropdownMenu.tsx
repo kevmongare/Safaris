@@ -1,5 +1,5 @@
 import React from 'react';
-import savanah from '../../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg';
+import EastAfrica from '../../assets/Map-of-East-Africa-showing-those-sites-that-are-most-important-for-the-conservation-of_Q320.jpg';
 import Lodge from '../../assets/villa-2-beautiful-bedouin.jpg';
 
 interface DropdownItem {
@@ -17,11 +17,11 @@ interface DropdownMenuProps {
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = false }) => {
   return (
-    <div className="group relative">
+    <div className="group relative ">
       <button className="flex items-center text-lg font-medium hover:text-[#c2a75c] transition">
         {title} <span className="ml-1">▾</span>
       </button>
-      <div className={`absolute top-full left-0 hidden group-hover:flex bg-white shadow-2xl p-6 ${
+      <div className={`absolute pt-10 top-full left-0 hidden group-hover:flex bg-white/90 shadow-2xl p-6 ${
         compact ? 'w-[400px]' : 'w-[800px]'
       } justify-between z-50`}>
         {compact ? (
@@ -66,9 +66,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
             <div className="ml-6">
               <h4 className="text-sm text-gray-600 mb-2">DISCOVER</h4>
               <img 
-                src={savanah} 
+                src={EastAfrica} 
                 alt="Safari Landscape" 
-                className="rounded-lg w-48 h-32 object-cover mb-2"
+                className=" w-48 h-32 object-cover mb-2"
               />
               <button className="text-sm border border-[#c2a75c] text-[#c2a75c] px-3 py-1 rounded hover:bg-[#c2a75c] hover:text-white transition">
                 Learn More
