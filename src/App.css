@@ -8,6 +8,12 @@
   --secondary:#8c8479;
   --button:#7c3e2d;
 }
+.home{
+  background-image: url('../assets/elephant.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 h1, h2, h3, body, p, span, button, a {
   font-family: 'Playfair Display', serif !important;
 }

@@ -7,8 +7,11 @@ export default function Contact(){
     <div className="max-w-xl mx-auto px-6">
       <h3 className="text-3xl font-bold mb-4 uppercase text-">Start Planning Your Safari</h3>
       <p className="mb-6 text-lg">Connect with our team today via WhatsApp or email — your journey into Africa begins here.</p>
-      <a href="" target="_blank" className="inline-block bg-[var(--secondary)] text-white font-bold px-8 py-3 uppercase tracking-wide hover:bg-gray-100">Message Us</a>
-    </div>
+      
+        <a href="" target="_blank" className="inline-block bg-[var(--primary)] text-white font-bold px-8 py-3 uppercase tracking-wide hover:bg-gray-100">Message Us</a>
+        <a href="" target="_blank" className="inline-block text-[var(--primary)] underline font-bold px-8 py-3 capitalize tracking-wide hover:bg-gray-100">Get A Quotaion</a>
+  
+      </div>
   </section>
 
         </>

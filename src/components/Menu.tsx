@@ -164,7 +164,7 @@
 //         </>
 //     )
 // }
-
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Logo from '../assets/logo.png';
 import DropdownMenu from './mobile/DropdownMenu';
@@ -189,11 +189,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
+            <Link to="/" className="hover:text-[var(--primary)]">
             <img 
               src={Logo} 
               alt="Safari Africa Logo" 
-              className="h-12 md:h-16 object-cover"
+              className="h-12 md:h-16 object-cover cursor-pointer"
             />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -203,11 +205,13 @@ const Header = () => {
               items={[
                 { 
                   country: "Kenya", 
-                  places: ["Masai Mara", "Nairobi NP", "Diani Beach", "Lake Nakuru", "Mt. Kenya"] 
+                  places: ["Masai Mara Game Reserve", "Amboseli National Park", "Aberdare National Park", "Meru National Park",
+                    "Nairobi National Park", "Samburu National Park", "Lake Nakuru National Park", "Lake Naivasha", "Tsavo National Park"] 
                 },
                 { 
                   country: "Tanzania", 
-                  places: ["Serengeti", "Ngorongoro", "Zanzibar", "Arusha", "Lake Manyara"] 
+                  places: ["Serengeti National Park", "Tarangire National Park", "Lake Manyara National Park",
+                  "Ngorongoro Conservation Area", "Selous Game Reserve", "Ruaha National Park", "Gombe Stream National Park", "Mahale Mountains National Park"] 
                 },
                 { 
                   country: "Uganda", 
@@ -223,11 +227,11 @@ const Header = () => {
             <DropdownMenu 
               title="Travel Styles" 
               items={[
-                { title: "Luxury Camps" },
-                { title: "Bush Lodges" },
-                { title: "Treehouses" },
-                { title: "Eco Lodges" },
-                { title: "Mobile Camps" }
+                { title: "Wildlife Safaris" },
+                { title: "Family Holidays" },
+                { title: "Adventure Expeditions" },
+                { title: "Bush & Beach Safaris" },
+                { title: "Outbound Holidays" }
               ]}
               compact
             />
