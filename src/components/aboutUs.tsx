@@ -4,7 +4,7 @@ export default function aboutUs(){
          {/* about */}
          {/* bg-[url('./assets/happy-intersection-2.svg.svg')] */}
   
-  <div className="flex flex-col md:flex-row items-baseline justify-between px-20 py-10 bg-[var(--primary)]">
+  <div className="flex flex-col md:flex-row items-baseline justify-between px-20 py-10 bg-[var(--secondary)]">
     {/* <!-- Left Column --> */}
     <div className="md:w-1/2 mb-10 md:mb-0">
       <h1 className="text-5xl md:text-6xl font-extrabold  pt-20 text-white">

@@ -21,8 +21,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
       <button className="flex items-center text-lg font-medium hover:text-[#c2a75c] transition">
         {title} <span className="ml-1">▾</span>
       </button>
-      <div className={`absolute pt-10 top-full left-0 border-[var(--primary)]/20 border-t-2 hidden group-hover:flex bg-white shadow-2xl p-6 ${
-        compact ? 'w-[400px]' : 'w-[1200px] -ml-110'
+      <div className={`absolute pt-10 top-full left-0 hidden group-hover:flex bg-white/90 shadow-2xl p-6 ${
+        compact ? 'w-[400px]' : 'w-[800px]'
       } justify-between z-50`}>
         {compact ? (
           <>
@@ -36,11 +36,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
               ))}
             </ul>
             <div className="ml-6">
-              <h4 className="text-sm text-gray-600 mb-2">DISCOVER </h4>
+              <h4 className="text-sm text-gray-600 mb-2">DISCOVER</h4>
               <img 
                 src={Lodge} 
                 alt="Luxury Lodge" 
-                className=" w-48 h-32 object-cover mb-2"
+                className="rounded-lg w-48 h-32 object-cover mb-2"
               />
               <button className="text-sm border border-[#c2a75c] text-[#c2a75c] px-3 py-1 rounded hover:bg-[#c2a75c] hover:text-white transition">
                 Learn More
