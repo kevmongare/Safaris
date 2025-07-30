@@ -32,8 +32,8 @@ function App() {
             </>}/>
             
           
-          <Route path="/Kenya" element={<Kenya />} />
-          <Route path="/Destination" element={<Destination/>} />
+          <Route path="/kenya" element={<Kenya />} />
+          <Route path="/destination" element={<Destination/>} />
           </Routes>
           <Footer />
             </>
