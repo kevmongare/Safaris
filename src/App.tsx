@@ -9,12 +9,12 @@ import DestinationHighlights from './components/DestinationHighlights';
 import Hero from './components/hero';
 import Contact from './components/contact';
 import Footer from './components/footer';
-import Destination from '../src/pages/destinationdemo'
+import Destination from './links/destinations/destinationdemo'
 import './App.css';
-import Kenya from '../src/pages/Kenya';
-import Tanzania from '../src/pages/Tanzania';
-import Uganda from  '../src/pages/Uganda'
-import Rwanda from '../src/pages/Rwanda'
+import Kenya from './links/countries/Kenya';
+import Tanzania from './links/countries/Tanzania';
+import Uganda from  './links/countries/Uganda'
+import Rwanda from './links/countries/Rwanda'
 import 'swiper/swiper-bundle.css';
 
 // Layout component for Menu and Footer
