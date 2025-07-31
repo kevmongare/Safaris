@@ -10,6 +10,7 @@ import Hero from './components/hero';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import Destination from './links/destinations/destinationdemo'
+import MasaiMara from './links/destinations/masaiMara'
 import './App.css';
 import Kenya from './links/countries/Kenya';
 import Tanzania from './links/countries/Tanzania';
@@ -39,6 +40,7 @@ function App() {
            <Route path="/tanzania" element={<Tanzania />} />
            <Route path="/uganda" element={<Uganda />} />
            <Route path='/rwanda' element ={<Rwanda/>} />
+           <Route path='/masaimara' element = {<MasaiMara/>}/>
           <Route path="/destination" element={<Destination/>} />
           
           </Routes>

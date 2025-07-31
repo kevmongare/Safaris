@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EastAfrica from '../assets/Map-of-East-Africa-showing-those-sites-that-are-most-important-for-the-conservation-of_Q320.jpg';
 import Lodge from '../assets/villa-2-beautiful-bedouin.jpg';
-
+interface PlaceItem {
+  name: string;
+  slug: string;
+}
 interface DropdownItem {
   country?: string;
   title?: string;
   countrySlug?: string;
-  places?: string[];
+  places?: PlaceItem[];
+  slug?: string; 
 }
 
 interface DropdownMenuProps {
@@ -17,9 +21,9 @@ interface DropdownMenuProps {
 }
 
 // Helper function to generate slug from place name
-const generateSlug = (name: string) => {
-  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
-};
+// const generateSlug = (name: string) => {
+//   return name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+// };
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = false }) => {
   return (
@@ -75,14 +79,14 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
                     <li key={pIdx}>
                       {item.countrySlug ? (
                         <Link 
-                          to={`/${item.countrySlug}#${generateSlug(place)}`}  // Using anchor links
+                          to={`/${place.slug}`}  // Using anchor links
                           className="hover:text-[#c2a75c] block"
                         >
-                          {place}
+                          {place.name}
                         </Link>
                       ) : (
                         <a href="#" className="hover:text-[#c2a75c]">
-                          {place}
+                          {place.name}
                         </a>
                       )}
                     </li>

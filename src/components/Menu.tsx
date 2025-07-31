@@ -41,26 +41,43 @@ const Header = () => {
                   country: "Kenya",
                   countrySlug: "kenya", 
                   places: [
-                    "Masai Mara", 
-                    "Nairobi NP", 
-                    "Diani Beach",
-                     "Lake Nakuru", 
-                     "Mt. Kenya"] 
+                    { name: "Masai Mara", slug: "masaimara" },
+                    { name: "Nairobi NP", slug: "nairobi-national-park" }, 
+                    { name: "Diani Beach", slug: "diani-beach" },
+                    { name: "Lake Nakuru", slug: "lake-nakuru" }, 
+                    { name: "Mt. Kenya", slug: "mount-kenya" }
+                    ] 
                 },
                 { 
                   country: "Tanzania", 
                   countrySlug: "tanzania", 
-                  places: ["Serengeti", "Ngorongoro", "Zanzibar", "Arusha", "Lake Manyara"] 
+                  places: [
+                    { name: "Serengeti", slug: "serengeti" }, 
+                    { name: "Ngorongoro", slug: "ngorongoro-crater" }, 
+                    { name: "Zanzibar", slug: "zanzibar" }, 
+                    { name: "Arusha", slug: "arusha" }, 
+                    { name: "Lake Manyara", slug: "lake-manyara" }
+                  ] 
                 },
                 { 
                   country: "Uganda", 
                   countrySlug: "uganda", 
-                  places: ["Bwindi Forest", "Kibale NP", "Murchison Falls", "Queen Elizabeth NP"] 
+                  places: [
+                    { name: "Bwindi Forest", slug: "bwindi-impenetrable-forest" }, 
+                    { name: "Kibale NP", slug: "kibale-national-park" }, 
+                    { name: "Murchison Falls", slug: "murchison-falls" }, 
+                    { name: "Queen Elizabeth NP", slug: "queen-elizabeth-national-park" }
+                  ] 
                 },
                 { 
                   country: "Rwanda", 
                   countrySlug: "rwanda", 
-                  places: ["Volcanoes NP", "Nyungwe Forest", "Akagera NP", "Kigali City"] 
+                  places: [
+                    { name: "Volcanoes NP", slug: "volcanoes-national-park" }, 
+                    { name: "Nyungwe Forest", slug: "nyungwe-forest" }, 
+                    { name: "Akagera NP", slug: "akagera-national-park" }, 
+                    { name: "Kigali City", slug: "kigali" }
+                  ] 
                 }
               ]}
             />
@@ -68,11 +85,11 @@ const Header = () => {
             <DropdownMenu 
               title="Travel Styles" 
               items={[
-                { title: "Luxury Camps" },
-                { title: "Bush Lodges" },
-                { title: "Treehouses" },
-                { title: "Eco Lodges" },
-                { title: "Mobile Camps" }
+                { title: "Luxury Camps", slug: "luxury-camps" },
+                { title: "Bush Lodges", slug: "bush-lodges" },
+                { title: "Treehouses", slug: "treehouses" },
+                { title: "Eco Lodges", slug: "eco-lodges" },
+                { title: "Mobile Camps", slug: "mobile-camps" }
               ]}
               compact
             />
