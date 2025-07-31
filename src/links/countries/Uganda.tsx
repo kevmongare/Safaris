@@ -1,5 +1,5 @@
 // src/components/KenyaWildlifePage.tsx
-import '../App.css'
+import '../../App.css'
 import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTree } from 'react-icons/fa';
 import SafariTruck from '../assets/safaris.jpeg'
 import Safari from '../assets/safaris.webp'
