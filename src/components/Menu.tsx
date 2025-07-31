@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../assets/logo.png';
-import DropdownMenu from './mobile/DropdownMenu';
-import MobileMenu from './mobile/MobileMenu';
+import DropdownMenu from '../mobile/DropdownMenu';
+import MobileMenu from '../mobile/MobileMenu';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
