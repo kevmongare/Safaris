@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EastAfrica from '../../assets/Map-of-East-Africa-showing-those-sites-that-are-most-important-for-the-conservation-of_Q320.jpg';
-import Lodge from '../../assets/villa-2-beautiful-bedouin.jpg';
+import EastAfrica from '../assets/Map-of-East-Africa-showing-those-sites-that-are-most-important-for-the-conservation-of_Q320.jpg';
+import Lodge from '../assets/villa-2-beautiful-bedouin.jpg';
 
 interface DropdownItem {
   country?: string;
