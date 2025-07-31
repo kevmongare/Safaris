@@ -1,17 +1,17 @@
 // import { useParams } from "react-router-dom";
-import MasaiMara from '../assets/masai-mara-wildlife.jpg'
-import NairobiLodge from '../assets/villa-2-beautiful-bedouin.jpg'
-import Nairobitruck from '../assets/safaris.jpeg'
-import roadtrip from '../assets/ROADTRIP.png'
-import serengeti from  '../assets/safaris.webp'
-import hotairballoon from '../assets/Hot air balloon.png'
-import elephant from '../assets/elephant.avif'
-import cheeta from '../assets/wildlife.jpg'
-import savanah from '../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
+import MasaiMara from '../../assets/masai-mara-wildlife.jpg'
+import NairobiLodge from '../../assets/villa-2-beautiful-bedouin.jpg'
+import Nairobitruck from '../../assets/safaris.jpeg'
+import roadtrip from '../../assets/ROADTRIP.png'
+import serengeti from  '../../assets/safaris.webp'
+import hotairballoon from '../../assets/Hot air balloon.png'
+import elephant from '../../assets/elephant.avif'
+import cheeta from '../../assets/wildlife.jpg'
+import savanah from '../../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import Menu from '../../components/Menu'
 import Whatsapp from "../../components/whatsapp";
 import Footer from "../../components/footer";
-import '../App.css'
+import '../../App.css'
 
 const packageDetails = {
   id: 1,
