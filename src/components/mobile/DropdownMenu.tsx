@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import EastAfrica from '../../assets/Map-of-East-Africa-showing-those-sites-that-are-most-important-for-the-conservation-of_Q320.jpg';
 import Lodge from '../../assets/villa-2-beautiful-bedouin.jpg';
 
 interface DropdownItem {
   country?: string;
   title?: string;
+  countrySlug?: string;
   places?: string[];
-  
 }
 
 interface DropdownMenuProps {
@@ -14,6 +15,11 @@ interface DropdownMenuProps {
   items: DropdownItem[];
   compact?: boolean;
 }
+
+// Helper function to generate slug from place name
+const generateSlug = (name: string) => {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+};
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = false }) => {
   return (
@@ -51,13 +57,34 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
           <>
             {items.map((item, idx) => (
               <div key={idx} className="space-y-2">
-                <h4 className="text-[#3a3a2c] font-bold mb-2">{item.country}</h4>
+                {/* Country Link */}
+                {item.country && item.countrySlug ? (
+                  <Link 
+                    to={`/${item.countrySlug}`}  // Changed to match your route
+                    className="text-[#3a3a2c] font-bold mb-2 hover:text-[#c2a75c] block"
+                  >
+                    {item.country}
+                  </Link>
+                ) : (
+                  <h4 className="text-[#3a3a2c] font-bold mb-2">{item.country}</h4>
+                )}
+                
+                {/* Destinations List */}
                 <ul className="text-sm text-gray-700 space-y-1">
                   {item.places?.map((place, pIdx) => (
                     <li key={pIdx}>
-                      <a href="#" className="hover:text-[#c2a75c]">
-                        {place}
-                      </a>
+                      {item.countrySlug ? (
+                        <Link 
+                          to={`/${item.countrySlug}#${generateSlug(place)}`}  // Using anchor links
+                          className="hover:text-[#c2a75c] block"
+                        >
+                          {place}
+                        </Link>
+                      ) : (
+                        <a href="#" className="hover:text-[#c2a75c]">
+                          {place}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

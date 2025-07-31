@@ -12,6 +12,9 @@ import Footer from './components/footer';
 import Destination from '../src/pages/destinationdemo'
 import './App.css';
 import Kenya from '../src/pages/Kenya';
+import Tanzania from '../src/pages/Tanzania';
+import Uganda from  '../src/pages/Uganda'
+import Rwanda from '../src/pages/Rwanda'
 import 'swiper/swiper-bundle.css';
 
 // Layout component for Menu and Footer
@@ -33,7 +36,11 @@ function App() {
             
           
           <Route path="/kenya" element={<Kenya />} />
+           <Route path="/tanzania" element={<Tanzania />} />
+           <Route path="/uganda" element={<Uganda />} />
+           <Route path='/rwanda' element ={<Rwanda/>} />
           <Route path="/destination" element={<Destination/>} />
+          
           </Routes>
           <Footer />
             </>
