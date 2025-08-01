@@ -10,7 +10,7 @@ import cheeta from '../../assets/wildlife.jpg'
 import savanah from '../../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg'
 import Menu from '../../components/Menu'
 import Whatsapp from "../../components/whatsapp";
-import Footer from "../../components/footer";
+
 import '../../App.css'
 
 const packageDetails = {
@@ -256,7 +256,7 @@ export default function PackageDetails() {
         </div>
       </section>
     </div>
-    <Footer />
+    
     </>
   );
 }
