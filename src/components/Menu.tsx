@@ -85,11 +85,11 @@ const Header = () => {
             <DropdownMenu 
               title="Travel Styles" 
               items={[
-                { title: "Luxury Camps", slug: "luxury-camps" },
-                { title: "Bush Lodges", slug: "bush-lodges" },
-                { title: "Treehouses", slug: "treehouses" },
-                { title: "Eco Lodges", slug: "eco-lodges" },
-                { title: "Mobile Camps", slug: "mobile-camps" }
+                { title: "Adventure Expeditions", slug: "luxury-camps" },
+                { title: "Family Holidays", slug: "bush-lodges" },
+                { title: "Wildlife Safaris", slug: "treehouses" },
+                { title: "Budget Safaris", slug: "eco-lodges" },
+                { title: "Tribal Expeditions", slug: "mobile-camps" }
               ]}
               compact
             />
