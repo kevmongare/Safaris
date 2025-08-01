@@ -36,10 +36,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
       } justify-between z-50`}>
         {compact ? (
           <>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
               {items.map((item, idx) => (
-                <li key={idx}>
-                  <a href="#" className="text-gray-700 hover:text-[#c2a75c]">
+                <li key={idx}
+                className='w-40'>
+                  <a href="#" className="text-gray-700 text-sm hover:text-[#c2a75c]">
                     {item.title}
                   </a>
                 </li>
