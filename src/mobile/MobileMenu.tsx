@@ -7,11 +7,18 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
   return (
-    <div className="md:hidden fixed inset-0 bg-white z-40 pt-20">
-      <div className="container mx-auto px-4 py-8">
+    
+    <div className="md:hidden fixed inset-0 bg-white z-40 ">
+       <div className="container mx-auto px-4 pyb-8">
         <div className="space-y-6">
           <div className="border-b pb-4">
-            <h3 className="text-lg font-bold mb-3">Destinations</h3>
+            <div className=' py-4 justify-between flex'>
+              <h3 className="text-lg font-bold mb-3">Destinations</h3>
+              <button onClick={onClose}
+              className='text-2xl'>
+                ⏏︎
+              </button>
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h4 className="text-[#3a3a2c] font-medium mb-2">Kenya</h4>
