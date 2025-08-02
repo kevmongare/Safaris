@@ -6,6 +6,7 @@ import AboutUs from './components/aboutUs';
 import TopDestinations from './components/TopDestinations';
 import About from './components/About';
 import DestinationHighlights from './components/DestinationHighlights';
+import TStyles from './components/TravelStyles';
 import Hero from './components/hero';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -17,6 +18,8 @@ import Tanzania from './links/countries/Tanzania';
 import Uganda from  './links/countries/Uganda'
 import Rwanda from './links/countries/Rwanda'
 import 'swiper/swiper-bundle.css';
+import Enquire from './components/EnquirePage'
+import FloatingEnquire from './components/floatingEnquire';
 
 // Layout component for Menu and Footer
 function App() {
@@ -28,8 +31,9 @@ function App() {
             <Hero />
             <About />
             <TopDestinations />
+            <TStyles />
             <DestinationHighlights />
-            <Whatsapp />
+            
             <AboutUs />
             <Blog />
             <Contact />
@@ -39,11 +43,14 @@ function App() {
           <Route path="/kenya" element={<Kenya />} />
            <Route path="/tanzania" element={<Tanzania />} />
            <Route path="/uganda" element={<Uganda />} />
+           <Route path='/enquire' element ={<Enquire />}/>
            <Route path='/rwanda' element ={<Rwanda/>} />
            <Route path='/masaimara' element = {<MasaiMara/>}/>
           <Route path="/destination" element={<Destination/>} />
           
           </Routes>
+          <FloatingEnquire />
+          <Whatsapp />
           <Footer />
             </>
    

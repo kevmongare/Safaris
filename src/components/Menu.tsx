@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import DropdownMenu from '../mobile/DropdownMenu';
 import MobileMenu from '../mobile/MobileMenu';
@@ -7,6 +7,7 @@ import MobileMenu from '../mobile/MobileMenu';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,17 +101,17 @@ const Header = () => {
             <a href="#blog" className="text-lg font-medium hover:text-[#c2a75c] transition">Blog</a>
             <a href="#about" className="text-lg font-medium hover:text-[#c2a75c] transition">About</a>
             
-            <a 
-              href="#contact" 
-              className="bg-[var(--primary)] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
+            <button 
+              onClick={() => navigate('/enquire')}
+              className="bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
             >
               Enquire
-            </a>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl text-[#c2a75c]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? "✕" : "☰"}

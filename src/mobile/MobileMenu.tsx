@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/logo.png';
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -71,8 +72,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
 
   return (
     <div className="md:hidden fixed inset-0 bg-white z-40 overflow-y-auto">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex justify-end py-4">
+      <div className="container mx-auto px-4 py-5">
+        
+        <div className="flex justify-between py-4 shaddow-sm">
+          <Link to="/">
+            <img 
+              src={Logo} 
+              alt="Safari Africa Logo" 
+              className="h-12 md:h-16 object-cover"
+            />
+            </Link>
           <button 
             onClick={onClose}
             className="text-3xl text-[#c2a75c] hover:text-[#a99252] transition"
@@ -85,7 +94,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
         <div className="space-y-6">
           {/* Destinations Section */}
           <div className="border-b pb-4">
+            <Link
+            to="/destination">
             <h3 className="text-lg font-bold mb-4">Destinations</h3>
+            </Link>
             <div className="grid grid-cols-2 gap-4">
               {countries.map((country, idx) => (
                 <div key={idx}>
