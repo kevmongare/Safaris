@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Import your images
 import SafariTruck from '../assets/safaris.jpeg';
 import Safari from '../assets/safaris.webp';
