@@ -1,8 +1,8 @@
-// Import your images
-import SafariTruck from '../assets/safaris.jpeg';
-import Safari from '../assets/safaris.webp';
-import wildlife from '../assets/elephant.avif';
-import Massai from '../assets/masai-mara-wildlife.jpg';
+import SafariTruck from '../assets/safaris.jpeg'
+import Safari from '../assets/safaris.webp'
+import wildlife from '../assets/elephant.avif'
+import Massai from '../assets/masai-mara-wildlife.jpg'
+
 
 const TravelStyles = () => {
   const travelStyles = [
@@ -45,34 +45,21 @@ const TravelStyles = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {travelStyles.map((style, index) => (
             <div 
               key={index}
-              className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full"
+              className="bg-white  shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
-              {/* Image section */}
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={style.icon} 
-                  alt={style.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
+              <div className="">
+                
+            <img src={style.icon} alt={style.title}  className="w-full h-48 object-cover mb-4"/>
+                <h3 className="text-xl font-bold text-[#3a3a2c] mb-2 p-4">{style.title}</h3>
+                <p className="text-gray-600 p-4">{style.description}</p>
               </div>
-              
-              {/* Content section */}
-              <div className="p-6 flex-grow">
-                <h3 className="text-xl font-bold text-[#3a3a2c] mb-2">{style.title}</h3>
-                <p className="text-gray-600">{style.description}</p>
-              </div>
-              
-              {/* Button section */}
               <div className="bg-[#f8f5eb] px-6 py-3 border-t border-[#e6e0c9]">
-                <button className="text-[#c2a75c] font-medium hover:text-[#a99252] transition flex items-center">
-                  Explore Options
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
+                <button className="text-[#c2a75c] font-medium hover:text-[#a99252] transition">
+                  Explore Options →
                 </button>
               </div>
             </div>
@@ -80,11 +67,8 @@ const TravelStyles = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-[#c2a75c] hover:bg-[#a99252] text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 flex items-center justify-center mx-auto">
+          <button className="bg-[#c2a75c] hover:bg-[#a99252] text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
             Find Your Perfect Safari
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
           </button>
         </div>
       </div>

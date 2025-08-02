@@ -6,7 +6,7 @@ import AboutUs from './components/aboutUs';
 import TopDestinations from './components/TopDestinations';
 import About from './components/About';
 import DestinationHighlights from './components/DestinationHighlights';
-import TStyles from './components/TravelStyles';
+import Hometravelstyles from './components/TravelStyles';
 import Hero from './components/hero';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -20,6 +20,7 @@ import Rwanda from './links/countries/Rwanda'
 import 'swiper/swiper-bundle.css';
 import Enquire from './components/EnquirePage'
 import FloatingEnquire from './components/floatingEnquire';
+import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
 
 // Layout component for Menu and Footer
 function App() {
@@ -29,14 +30,13 @@ function App() {
         <Routes>
             <Route path="/" element={<>
             <Hero />
-            <About />
+             <About />
             <TopDestinations />
-            <TStyles />
+            <Hometravelstyles />
             <DestinationHighlights />
-            
             <AboutUs />
             <Blog />
-            <Contact />
+            <Contact /> 
             </>}/>
             
           
@@ -46,6 +46,7 @@ function App() {
            <Route path='/enquire' element ={<Enquire />}/>
            <Route path='/rwanda' element ={<Rwanda/>} />
            <Route path='/masaimara' element = {<MasaiMara/>}/>
+           <Route path='TravelStyleExpeditions' element = {<TravelStyleExpeditions/>}/>
           <Route path="/destination" element={<Destination/>} />
           
           </Routes>

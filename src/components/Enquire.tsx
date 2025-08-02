@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import type { FormEvent, ChangeEvent } from 'react';
 import { FaTimes, FaUser, FaEnvelope, FaPhone, FaCalendarAlt, FaUserFriends, FaGlobeAfrica } from 'react-icons/fa';
 
@@ -36,57 +36,67 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setError('');
 
-    try {
-      // Replace with your Formspree form ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID_HERE', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          ...formData,
-          subject: `Safari Enquiry: ${formData.name} - ${formData.destination || 'No destination specified'}`
-        })
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        // Reset form after success
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          destination: '',
-          travelDates: '',
-          travelers: '1',
-          message: ''
-        });
-        
-        // Close the popup after 3 seconds
-        setTimeout(() => {
-          onClose();
-        }, 3000);
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to submit form');
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
-      console.error('Form submission error:', err);
-    } finally {
-      setIsSubmitting(false);
+  try {
+    // 1. Validate required fields
+    if (!formData.name || !formData.email) {
+      throw new Error('Name and email are required');
     }
-  };
 
+    // 2. Prepare payload
+    const payload = new URLSearchParams();
+    payload.append('entry.330168742', formData.name);
+    payload.append('entry.589156329', formData.email);
+    payload.append('entry.1230767656', formData.phone || 'N/A');
+    payload.append('entry.189298300', formData.destination || 'Not specified');
+    
+    // 3. Handle date (single field fallback)
+    if (formData.travelDates) {
+      payload.append('entry.1529108690', formData.travelDates);
+    }
+
+    payload.append('entry.187710898', formData.travelers);
+    payload.append('entry.1807298961', formData.message || 'No message');
+
+    // 4. Submit with enhanced error handling
+    const response = await fetch(
+      'https://docs.google.com/forms/d/e/1FAIpQLSc5ln1XPBsD4WHhzjMF2C6zQgX9Q36GumK4tb6fJO0E3iT6Fw/formResponse',
+      {
+        method: 'POST',
+        body: payload,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        mode: 'no-cors',
+        referrerPolicy: 'no-referrer',
+      }
+    );
+
+    // 5. Verify submission (limited due to no-cors)
+    if (!response.ok && response.type !== 'opaque') {
+      throw new Error('Server rejected submission');
+    }
+
+    // 6. Force delay to ensure submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    setSubmitted(true);
+    setTimeout(() => onClose(), 3000);
+
+  } catch (err) {
+    setError('Submission failed. Please email us directly at bookings@safari.com');
+    console.error('Submission error:', err);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 pt-15">
       <div className="bg-white shadow-2xl overflow-hidden w-full max-w-2xl relative">
-        {/* Move this button to be the first element in the container */}
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-[#c2a75c] transition z-50"
@@ -95,9 +105,8 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
           <FaTimes className="text-2xl" />
         </button>
         
-        <div className="h-40 bg-gradient-to-r from-[#c2a75c] to-[#a99252] relative overflow-hidden">
-          {/* Add pointer-events-none to background image */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-20 pointer-events-none" />
+        <div className="h-40 bg-gradient-to-r from-[var(--primary)] to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('./assets/safaris.webp')] bg-cover bg-center opacity-30 pointer-events-none" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center p-4 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-2">Plan Your Safari Adventure</h2>
             <p className="text-center max-w-md">Our experts will help you create the perfect safari experience</p>
@@ -128,7 +137,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
                   <div className="relative">
-                    <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--primary)]" />
                     <input
                       type="text"
                       id="name"
@@ -137,7 +146,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                       onChange={handleChange}
                       required
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c2a75c] focus:border-[#c2a75c] transition"
-                      placeholder="John Doe"
+                      placeholder="Your full name"
                     />
                   </div>
                 </div>
@@ -146,7 +155,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
                   <div className="relative">
-                    <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--primary)]" />
                     <input
                       type="email"
                       id="email"
@@ -155,7 +164,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                       onChange={handleChange}
                       required
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c2a75c] focus:border-[#c2a75c] transition"
-                      placeholder="john@example.com"
+                      placeholder="tonny@example.com"
                     />
                   </div>
                 </div>
@@ -164,7 +173,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                   <div className="relative">
-                    <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--primary)]" />
                     <input
                       type="tel"
                       id="phone"
@@ -181,7 +190,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="destination" className="block text-sm font-medium text-gray-700 mb-1">Destination</label>
                   <div className="relative">
-                    <FaGlobeAfrica className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaGlobeAfrica className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--primary)]" />
                     <select
                       id="destination"
                       name="destination"
@@ -196,7 +205,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                       <option value="rwanda">Rwanda</option>
                     </select>
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                       </svg>
                     </div>
@@ -207,17 +216,14 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="travelDates" className="block text-sm font-medium text-gray-700 mb-1">Travel Dates</label>
                   <div className="relative">
-                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2  text-[var(--primary)]" />
                     <input
-                      type="text"
+                      type="date"
                       id="travelDates"
                       name="travelDates"
                       value={formData.travelDates}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c2a75c] focus:border-[#c2a75c] transition"
-                      placeholder="Approximate dates of travel"
-                      onFocus={(e) => (e.target.type = 'date')}
-                      onBlur={(e) => (e.target.type = 'text')}
                     />
                   </div>
                 </div>
@@ -226,7 +232,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                 <div className="relative">
                   <label htmlFor="travelers" className="block text-sm font-medium text-gray-700 mb-1">Number of Travelers</label>
                   <div className="relative">
-                    <FaUserFriends className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <FaUserFriends className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--primary)]" />
                     <select
                       id="travelers"
                       name="travelers"
@@ -240,7 +246,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
                       <option value="10+">10+ People</option>
                     </select>
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                       </svg>
                     </div>
@@ -266,7 +272,7 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full bg-[#c2a75c] hover:bg-[#a99252] text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center ${
+                className={`w-full bg-[var(--primary)] hover:bg-[#a99252] text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >

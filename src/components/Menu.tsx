@@ -87,7 +87,7 @@ const Header = () => {
             
               title="Travel Styles" 
               items={[
-                { title: "Adventure Expeditions", slug: "luxury-camps" },
+                { title: "Adventure Expeditions", slug: "TravelStyleExpeditions" },
                 { title: "Family Holidays", slug: "bush-lodges" },
                 { title: "Wildlife Safaris", slug: "treehouses" },
                 { title: "Budget Safaris", slug: "eco-lodges" },
