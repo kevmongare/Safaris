@@ -166,7 +166,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
 
           {/* Enquire Button */}
           <Link 
-            to="/contact"
+            to="/enquire"
             className="block bg-[#c2a75c] text-white py-3 px-6 rounded-full text-center hover:bg-[#a99252] transition"
             onClick={onClose}
           >
