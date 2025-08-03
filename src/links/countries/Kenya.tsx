@@ -1,6 +1,6 @@
 // src/components/KenyaWildlifePage.tsx
 
-import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTree, FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
+import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers,FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
 
 const KenyaWildlifePage = () => {
   return (
