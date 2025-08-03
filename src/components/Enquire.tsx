@@ -36,64 +36,56 @@ const EnquirePopup: React.FC<EnquirePopupProps> = ({ onClose }) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  setError('');
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
 
-  try {
-    // 1. Validate required fields
-    if (!formData.name || !formData.email) {
-      throw new Error('Name and email are required');
+    try {
+      // Create JSON payload
+      const payload = JSON.stringify({
+        ...formData,
+        timestamp: new Date().toISOString()
+      });
+
+      // Submit with no-cors mode - don't attempt to read response
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbzQghgwkR4IofHQjN8Ml1tbPJ_1eYrg4rqKu3xiloQOsg7AQXtnm7dMU2zjym756SD-UQ/exec',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: payload,
+          mode: 'no-cors' // Critical for avoiding CORS issues
+        }
+      );
+
+      // If we get here, assume submission was successful
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        destination: '',
+        travelDates: '',
+        travelers: '1',
+        message: '',
+      });
+      
+      // Close after 3 seconds
+      setTimeout(() => onClose(), 3000);
+
+    } catch (err) {
+      // Only network errors will be caught here
+      const errorMessage = 'Submission failed. Please email us directly at bookings@safari.com';
+      setError(errorMessage);
+      console.error('Submission error:', err);
+    } finally {
+      setIsSubmitting(false);
     }
+  };
 
-    // 2. Prepare payload
-    const payload = new URLSearchParams();
-    payload.append('entry.330168742', formData.name);
-    payload.append('entry.589156329', formData.email);
-    payload.append('entry.1230767656', formData.phone || 'N/A');
-    payload.append('entry.189298300', formData.destination || 'Not specified');
-    
-    // 3. Handle date (single field fallback)
-    if (formData.travelDates) {
-      payload.append('entry.1529108690', formData.travelDates);
-    }
-
-    payload.append('entry.187710898', formData.travelers);
-    payload.append('entry.1807298961', formData.message || 'No message');
-
-    // 4. Submit with enhanced error handling
-    const response = await fetch(
-      'https://docs.google.com/forms/d/e/1FAIpQLSc5ln1XPBsD4WHhzjMF2C6zQgX9Q36GumK4tb6fJO0E3iT6Fw/formResponse',
-      {
-        method: 'POST',
-        body: payload,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        mode: 'no-cors',
-        referrerPolicy: 'no-referrer',
-      }
-    );
-
-    // 5. Verify submission (limited due to no-cors)
-    if (!response.ok && response.type !== 'opaque') {
-      throw new Error('Server rejected submission');
-    }
-
-    // 6. Force delay to ensure submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setSubmitted(true);
-    setTimeout(() => onClose(), 3000);
-
-  } catch (err) {
-    setError('Submission failed. Please email us directly at bookings@safari.com');
-    console.error('Submission error:', err);
-  } finally {
-    setIsSubmitting(false);
-  }
-};
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 pt-15">
       <div className="bg-white shadow-2xl overflow-hidden w-full max-w-2xl relative">
