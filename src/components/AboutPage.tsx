@@ -1,4 +1,4 @@
-import { FaMountain, FaUsers, FaHeart, FaHandshake, FaMapMarkedAlt, FaAward } from 'react-icons/fa';
+import {FaHeart, FaHandshake, FaMapMarkedAlt, FaAward } from 'react-icons/fa';
 
 const AboutPage = () => {
   const teamMembers = [

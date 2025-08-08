@@ -2,7 +2,7 @@ import SafariTruck from '../assets/safaris.jpeg'
 import Safari from '../assets/safaris.webp'
 import wildlife from '../assets/elephant.avif'
 import Massai from '../assets/masai-mara-wildlife.jpg'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const TravelStyles = () => {

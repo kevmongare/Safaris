@@ -1,5 +1,3 @@
-// src/pages/BlogPage.jsx
-import React from 'react';
 import { FaCalendarAlt, FaUser, FaComments, FaSearch, FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from 'react-icons/fa';
 
 const BlogPage = () => {
