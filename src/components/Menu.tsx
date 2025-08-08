@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md py-2' : 'bg-white shadow-md py-4'
+      scrolled ? 'bg-[#f9f7f2] shadow-md py-2' : 'bg-[#f9f7f2] shadow-md py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -97,10 +97,18 @@ const Header = () => {
             />
             
             <a href="#experiences" className="text-lg font-medium hover:text-[#c2a75c] transition">Experiences</a>
+            <Link
+            to ='/offers'>
             <a href="#offers" className="text-lg font-medium hover:text-[#c2a75c] transition">Offers</a>
+            </Link>
+            <Link
+            to = '/blog'>
             <a href="#blog" className="text-lg font-medium hover:text-[#c2a75c] transition">Blog</a>
+            </Link>
+            <Link
+            to = '/about'>
             <a href="#about" className="text-lg font-medium hover:text-[#c2a75c] transition">About</a>
-            
+            </Link>
             <button 
               onClick={() => navigate('/enquire')}
               className="bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"

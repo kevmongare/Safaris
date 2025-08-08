@@ -21,6 +21,9 @@ import 'swiper/swiper-bundle.css';
 import Enquire from './components/EnquirePage'
 import FloatingEnquire from './components/floatingEnquire';
 import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
+import Offer from './components/OfferCard'
+import BlogPage from './components/BlogPage';
+import AboutPage from './components/AboutPage';
 
 // Layout component for Menu and Footer
 function App() {
@@ -48,6 +51,11 @@ function App() {
            <Route path='/masaimara' element = {<MasaiMara/>}/>
            <Route path='TravelStyleExpeditions' element = {<TravelStyleExpeditions/>}/>
           <Route path="/destination" element={<Destination/>} />
+          <Route path="/offers" element={<Offer/>} />
+          <Route path="/blog" element={<BlogPage/>} />
+          <Route path="/About" element={<AboutPage/>} />
+          
+          
           
           </Routes>
           <FloatingEnquire />

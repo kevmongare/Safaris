@@ -2,12 +2,14 @@ import SafariTruck from '../assets/safaris.jpeg'
 import Safari from '../assets/safaris.webp'
 import wildlife from '../assets/elephant.avif'
 import Massai from '../assets/masai-mara-wildlife.jpg'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const TravelStyles = () => {
   const travelStyles = [
     {
       title: "Adventure Expeditions",
+      slug: "TravelStyleExpeditions",
       description: "Thrilling journeys through rugged terrains and remote wilderness areas",
       icon: Massai
     },
@@ -58,9 +60,12 @@ const TravelStyles = () => {
                 <p className="text-gray-600 p-4">{style.description}</p>
               </div>
               <div className="bg-[#f8f5eb] px-6 py-3 border-t border-[#e6e0c9]">
-                <button className="text-[#c2a75c] font-medium hover:text-[#a99252] transition">
+                <Link to ={`/${style.slug}`} 
+                >
+                <button className="text-[#c2a75c] cursor-pointer font-medium hover:text-[#a99252] transition">
                   Explore Options →
                 </button>
+                </Link>
               </div>
             </div>
           ))}

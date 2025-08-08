@@ -5,13 +5,16 @@ import Lodge from '../assets/villa-2-beautiful-bedouin.jpg';
 interface PlaceItem {
   name: string;
   slug: string;
+  
 }
 interface DropdownItem {
   country?: string;
   title?: string;
   countrySlug?: string;
   places?: PlaceItem[];
-  slug?: string; 
+  slug?: string;
+
+  
 }
 
 interface DropdownMenuProps {
@@ -40,9 +43,12 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
               {items.map((item, idx) => (
                 <li key={idx}
                 className='w-40'>
+                  <Link
+                  to={`/${item.slug}`} >
                   <a href="#" className="text-gray-700 text-sm hover:text-[#c2a75c]">
                     {item.title}
                   </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -58,19 +64,22 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
               </button>
             </div>
           </>
-        ) : (
+        ) 
+        : (
           <>
             {items.map((item, idx) => (
               <div key={idx} className="space-y-2">
                 {/* Country Link */}
                 {item.country && item.countrySlug ? (
                   <Link 
-                    to={`/${item.countrySlug}`}  // Changed to match your route
+                    to={`/${item.countrySlug}`}  // Changed to match route
                     className="text-[#3a3a2c] font-bold mb-2 hover:text-[#c2a75c] block"
                   >
                     {item.country}
                   </Link>
-                ) : (
+                ) 
+                : 
+                (
                   <h4 className="text-[#3a3a2c] font-bold mb-2">{item.country}</h4>
                 )}
                 
@@ -93,6 +102,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
                     </li>
                   ))}
                 </ul>
+
               </div>
             ))}
             <div className="ml-6">
