@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import MasaiMara from '../../assets/masai-mara-wildlife.jpg';
-import NairobiLodge from '../../assets/villa-2-beautiful-bedouin.jpg';
-import Nairobitruck from '../../assets/safaris.jpeg';
-import roadtrip from '../../assets/ROADTRIP.png';
-import serengeti from '../../assets/safaris.webp';
-import hotairballoon from '../../assets/Hot air balloon.png';
+// import NairobiLodge from '../../assets/villa-2-beautiful-bedouin.jpg';
+// import Nairobitruck from '../../assets/safaris.jpeg';
+// import roadtrip from '../../assets/ROADTRIP.png';
+// import serengeti from '../../assets/safaris.webp';
+// import hotairballoon from '../../assets/Hot air balloon.png';
 import elephant from '../../assets/elephant.avif';
 import cheeta from '../../assets/wildlife.jpg';
 import savanah from '../../assets/savannah-landscape-in-the-national-park-of-kenya-P56CU7Y-1.jpg';
@@ -13,38 +13,7 @@ const packageDetails = {
   id: 1,
   title: "Maasai Mara Game Reserve",
   heroImage: MasaiMara,
-  itinerary: [
-    {
-      day: 1,
-      title: "Arrival in Nairobi",
-      desc: "Arrival at Jomo Kenyatta International Airport. Meet and greet by our representative. Transfer to your hotel in Nairobi. Briefing and relaxation.",
-      image: NairobiLodge
-    },
-    {
-      day: 2,
-      title: "Nairobi City Tour & Drive to Masai Mara",
-      desc: "Visit Giraffe Centre and Kazuri Beads. After lunch, drive through the Great Rift Valley to Masai Mara. Evening game drive.",
-      image: Nairobitruck
-    },
-    {
-      day: 3,
-      title: "Full Day Game Drive in Masai Mara",
-      desc: "Explore Masai Mara's Big Five territories. Witness the Great Migration (seasonal). Picnic lunch in the wild.",
-      image: roadtrip
-    },
-    {
-      day: 4,
-      title: "Hot Air Balloon Safari & Maasai Village Visit",
-      desc: "Early morning hot air balloon safari over the savannah. Later, visit a Maasai cultural village for a traditional experience.",
-      image: hotairballoon
-    },
-    {
-      day: 5,
-      title: "Cross Border to Serengeti",
-      desc: "Transfer to Isebania border. Cross into Tanzania and continue into Serengeti. Game drive en route to your lodge.",
-      image: serengeti
-    },
-  ],
+  
   includes: {
     included: ["Accommodation", "All meals", "Park fees", "Local flights", "Transfers"],
     excluded: ["International flights", "Tips", "Personal expenses"],
@@ -178,38 +147,6 @@ export default function PackageDetails() {
         </div>
       </section>
 
-      {/* Itinerary Section */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="flex items-center mb-6">
-          <h2 className="text-3xl font-bold mr-4">ITINERARY</h2>
-          <span className="text-3xl" style={{ color: '#c2a75c' }}>+</span>
-        </div>
-        
-        <div className="space-y-8">
-          {packageDetails.itinerary.map((item) => (
-            <div 
-              key={item.day} 
-              className="flex flex-col md:flex-row"
-            >
-              <div className="md:w-1/3">
-                <img 
-                  src={item.image} 
-                  alt={`Day ${item.day}`} 
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-              <div className="p-6 flex-1">
-                <div className="flex items-center mb-2">
-                  <span className="text-xl font-bold mr-2" style={{ color: '#c2a75c' }}>+</span>
-                  <h3 className="text-xl font-bold">Day {item.day}: {item.title}</h3>
-                </div>
-                <p className="text-gray-700">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Included Section */}
       <section className="py-16 px-4" style={{ backgroundColor: '#3a3a2c' }}>
         <div className="max-w-6xl mx-auto">
@@ -221,14 +158,7 @@ export default function PackageDetails() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8">
               <h3 className="text-2xl font-bold mb-4" style={{ color: '#c2a75c' }}>Included</h3>
-              <ul className="space-y-3">
-                {packageDetails.includes.included.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-xl mr-2" style={{ color: '#c2a75c' }}>→</span>
-                    <span className="text-gray-800">{item}</span>
-                  </li>
-                ))}
-              </ul>
+             
             </div>
             
             <div className="bg-white p-8">
@@ -289,7 +219,7 @@ export default function PackageDetails() {
       {destinations.map((destination, index) => (
         <div 
           key={index}
-          className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          className="bg-white  overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
         >
           <div className="h-48 overflow-hidden">
             <img
