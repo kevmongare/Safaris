@@ -1,5 +1,5 @@
 // src/components/KenyaWildlifePage.tsx
-
+import { Link } from 'react-router-dom';
 import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers,FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
 
 const KenyaWildlifePage = () => {
@@ -25,8 +25,8 @@ const KenyaWildlifePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               
-              <button className="bg-transparent border-2 border-amber-400 text-amber-100 px-8 py-3 rounded-lg font-medium hover:bg-amber-500/20 transition duration-300 hover:border-amber-300 transform hover:scale-105">
-                Download Guide
+              <button className="bg-transparent border-2 border-[--button] text-gray-100 px-8 py-3 font-medium hover:bg-black/50 transition duration-300 hover:border-[var(--button)] transform hover:scale-105">
+                Check Destinations
               </button>
             </div>
           </div>
@@ -125,7 +125,7 @@ const KenyaWildlifePage = () => {
       </section>
 
       {/* Top Destinations Section */}
-      <section className="py-16 bg-[var(--secondary)]">
+      <section className="py-16 bg-[#f9f7f2]">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary)]">
@@ -142,6 +142,7 @@ const KenyaWildlifePage = () => {
               {
                 id: "maasai-mara",
                 name: "Maasai Mara",
+                slug: "masaimara",
                 image: "https://images.unsplash.com/photo-1589560364661-4eae3e0d46e6?q=80&w=2070&auto=format&fit=crop",
                 excerpt: "World-famous for the Great Migration and exceptional wildlife viewing",
                 rating: 4.9,
@@ -209,10 +210,12 @@ const KenyaWildlifePage = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <button className="mt-6 w-full bg-[var(--primary)] text-white hover:from-amber-600 hover:to-amber-700 py-2 rounded-lg font-medium transition-all duration-300">
+                  <Link
+                  to={`/${destination.slug}`} >
+                  <button className="cursor-pointer mt-6 w-full bg-[var(--primary)] text-white hover:from-[var(--primary)]  hover:to-[var(--seondary)] py-2 rounded-lg font-medium transition-all duration-300">
                     Explore Destination
                   </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -228,7 +231,7 @@ const KenyaWildlifePage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
                 Best Time to Visit Kenya
               </h2>
-              <div className="w-24 h-1 bg-amber-500 mx-auto mb-4 rounded-full"></div>
+              <div className="w-24 h-1 bg-[var(--primary)] mx-auto mb-4 rounded-full"></div>
               <p className="text-gray-600 text-lg">
                 Kenya offers incredible wildlife experiences throughout the year
               </p>

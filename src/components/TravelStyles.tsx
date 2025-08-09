@@ -72,9 +72,12 @@ const TravelStyles = () => {
         </div>
 
         <div className="text-center mt-12">
+        <Link 
+              to="/offers">
           <button className="bg-[#c2a75c] hover:bg-[#a99252] text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
             Find Your Perfect Safari
           </button>
+          </Link>
         </div>
       </div>
     </section>

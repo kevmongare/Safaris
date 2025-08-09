@@ -1,4 +1,5 @@
 
+
 const TourOffersPage = () => {
   // Updated tour data with East Africa focus
   const featuredTours = [
@@ -36,9 +37,9 @@ const TourOffersPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f9f7f2]">
+    <div className="min-h-screen bg-[#f9f7f2] relative">
       {/* Hero Section */}
-      <div className="relative bg-[#3a3a2c] text-[#f9f7f2] py-20 px-4">
+      <div className="relative bg-[#3a3a2c] text-[#f9f7f2] py-20 px-4 flex items-center justify-center h-[80vh]">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">East Africa Safari Deals</h1>
           <p className="text-xl max-w-3xl mx-auto mb-8">

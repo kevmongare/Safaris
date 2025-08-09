@@ -1,4 +1,5 @@
 import { Routes, Route} from 'react-router-dom';
+import Scroll from './components/ScrollToTop'
 import Menu from './components/Menu';
 import Blog from '../src/components/blog';
 import Whatsapp from './components/whatsapp';
@@ -24,13 +25,16 @@ import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
 import Offer from './components/OfferCard'
 import BlogPage from './components/BlogPage';
 import AboutPage from './components/AboutPage';
+import FreeConsultation from './components/Consultation';
 
 // Layout component for Menu and Footer
 function App() {
   return (
         <>
         <Menu />
+        <Scroll/>
         <Routes>
+          
             <Route path="/" element={<>
             <Hero />
              <About />
@@ -58,6 +62,7 @@ function App() {
           
           
           </Routes>
+          <FreeConsultation/ >
           <FloatingEnquire />
           <Whatsapp />
           <Footer />

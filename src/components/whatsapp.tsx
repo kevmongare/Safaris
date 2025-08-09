@@ -12,7 +12,7 @@ export default function Whatsapp(){
       href={whatsappURL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-10 right-10 z-50 bg-[var(--secondary)] text-white rounded-full p-4 shadow-lg hover:bg-orange-600  transition  animate-pulse"
+      className="fixed bottom-10 right-10 z-50 bg-[var(--secondary)] text-white rounded-full p-4 shadow-lg hover:bg-[var(--primary)]  transition  animate-pulse"
     >
        <svg
         xmlns="http://www.w3.org/2000/svg"

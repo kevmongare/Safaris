@@ -88,39 +88,14 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen bg-[#f9f7f2]">
-      {/* Header */}
-      <header className="bg-[#3a3a2c] shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold text-[#f9f7f2]">SafariExplorer</div>
-            </div>
-            
-            <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-[#f9f7f2] hover:text-[#7c3e2d]">Home</a>
-              <a href="#" className="text-[#7c3e2d] font-medium border-b-2 border-[#7c3e2d]">Blog</a>
-              <a href="#" className="text-[#f9f7f2] hover:text-[#7c3e2d]">Destinations</a>
-              <a href="#" className="text-[#f9f7f2] hover:text-[#7c3e2d]">Tours</a>
-              <a href="#" className="text-[#f9f7f2] hover:text-[#7c3e2d]">About</a>
-              <a href="#" className="text-[#f9f7f2] hover:text-[#7c3e2d]">Contact</a>
-            </nav>
-            
-            <button 
-              className="md:hidden text-[#f9f7f2]" 
-              title="Open navigation menu" 
-              aria-label="Open navigation menu"
-            >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <div className="relative bg-[#3a3a2c] text-[#f9f7f2] py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+       
+      <div className="relative bg-black/70 text-[#f9f7f2] py-16 md:py-24 h-[80vh]">
+       <div 
+          className="absolute  inset-0 bg-cover bg-center z-0 bg-[url('./assets/wildlife.jpg')] bg-fixed flex items-center text-center"
+           >
+       
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/70 p-10 mt-30">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">East Africa Travel Stories</h1>
           <p className="text-xl max-w-3xl mx-auto mb-8">
             Discover Kenya, Uganda, Tanzania and Rwanda through our travel experiences
@@ -130,10 +105,10 @@ const BlogPage = () => {
               <input 
                 type="text" 
                 placeholder="Search destinations, tips, guides..." 
-                className="w-full px-5 py-3 ll text-[#3a3a2c] focus:outline-none focus:ring-2 focus:ring-[#7c3e2d]"
+                className="w-full bg-white/50 px-5 py-3 ll text-white focus:outline-none focus:ring-2 focus:ring-[var(--button)]"
               />
               <button
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#7c3e2d] hover:bg-[#6a3526] text-[#f9f7f2] ll p-2"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[var(--button)] hover:bg-[var(--button)] text-[#f9f7f2] ll p-2"
                 title="Search"
                 aria-label="Search"
               >
@@ -142,6 +117,7 @@ const BlogPage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* Main Content */}
@@ -176,7 +152,7 @@ const BlogPage = () => {
                     <p className="text-[#8c8479] mb-4">{post.excerpt}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-[#8c8479]">{post.readTime}</span>
-                      <button className="text-[#7c3e2d] hover:text-[#6a3526] font-medium flex items-center">
+                      <button className="text-[#7c3e2d] hover:text-[var(--button)] font-medium flex items-center">
                         Read more
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -218,7 +194,7 @@ const BlogPage = () => {
                     <p className="text-[#8c8479] mb-4">{post.excerpt}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-[#8c8479]">{post.readTime}</span>
-                      <button className="text-[#7c3e2d] hover:text-[#6a3526] font-medium flex items-center">
+                      <button className="text-[#7c3e2d] hover:text-[var(--button)] font-medium flex items-center">
                         Read more
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -303,7 +279,7 @@ const BlogPage = () => {
                 />
                 <button 
                   type="submit"
-                  className="w-full bg-[#7c3e2d] hover:bg-[#6a3526] text-[#f9f7f2] font-medium py-2 px-4  transition-colors"
+                  className="w-full bg-[var(--button)] hover:bg-[var(--button)] text-[#f9f7f2] font-medium py-2 px-4  transition-colors"
                 >
                   Subscribe
                 </button>

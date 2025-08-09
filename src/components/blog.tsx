@@ -35,6 +35,20 @@ const blogPosts = [
     image: Giraff,
     category: "Conservation",
   },
+  {
+    id: 1,
+    title: "Top 5 Safari Camps in East Africa",
+    excerpt: "Experience the wild in comfort. Discover luxurious and eco-friendly safari camps...",
+    image: Lodge,
+    category: "Kenya",
+  },
+  {
+    id: 2,
+    title: "What to Pack for a Safari",
+    excerpt: "Make the most of your safari by packing smart. Here's your essential checklist...",
+    image: SafariTruck,
+    category: "Tips",
+  }
   // Add more if needed
 ];
 

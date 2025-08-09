@@ -107,14 +107,19 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
             ))}
             <div className="ml-6">
               <h4 className="text-sm text-gray-600 mb-2">DISCOVER</h4>
+              
               <img 
                 src={EastAfrica} 
                 alt="Safari Landscape" 
                 className=" w-48 h-32 object-cover mb-2"
               />
+              
+              <Link 
+              to="/offers">
               <button className="text-sm border border-[#c2a75c] text-[#c2a75c] px-3 py-1 rounded hover:bg-[#c2a75c] hover:text-white transition">
                 Learn More
               </button>
+              </Link>
             </div>
           </>
         )}
