@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import masai from  '../../assets/masai-mara-wildlife.jpg'
 import LakeNakuru from '../../assets/Kenya/Lakenakuru/The-Wonders-of-Lake-Nakuru-National-Park--750x389.jpg'
 import Amboseli from '../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Amboseli-National-Park-1024x683.webp'
@@ -5,7 +6,7 @@ import Meru from '../../assets/Kenya/Meru/images (2).jpeg'
 import Diani from '../../assets/Kenya/Diani/diani-sunbeds-1.jpg'
 import Nairobi from '../../assets/Kenya/Nairobi/Nairobi-National-Park-700x450-1.jpg'
 // import { BsPeopleFill } from "react-icons/bs";
-// import { Link } from 'react-router-dom';
+
 // import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers,FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
 
 const Header = 'Kenya'
@@ -25,6 +26,7 @@ const Funfacts = [
 const Top_Destinations =[
   {
     name : 'Masai Mara',
+    slug:'masaimara',
     img : masai,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
@@ -103,7 +105,10 @@ const KenyaWildlifePage = () => {
         <div className='px-4 py-5 '>
           <h1 className='text-[var(--secondary)] text-2xl py-3 font-bold'>{TDestination.name}</h1>
           <p className='font-light pb-4'>{TDestination.description}</p>
+          <Link
+          to={`/${TDestination.slug}`}>
           <a href="" className='cursor-pointer underline text-[var(--button)]'>{TDestination.DestinationCTA}</a>
+        </Link>
         </div>
       </div>
     ))}
