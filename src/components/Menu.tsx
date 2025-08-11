@@ -109,13 +109,14 @@ const Header = () => {
             to = '/about'>
             <a href="#about" className="text-lg font-medium hover:text-[#c2a75c] transition">About</a>
             </Link>
-            <button 
+            
+          </nav>
+          <button 
               onClick={() => navigate('/enquire')}
               className="bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
             >
               Enquire
             </button>
-          </nav>
 
           {/* Mobile Menu Button */}
           <button 
