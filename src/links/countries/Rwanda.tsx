@@ -1,6 +1,5 @@
 // src/components/KenyaWildlifePage.tsx
 import { Link } from 'react-router-dom';
-import cheetah from '../../assets/Diani-Sea-Lodge-copy.png'
 import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers,FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
 
 const RwandaWildlifePage = () => {
