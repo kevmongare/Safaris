@@ -1,10 +1,11 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
 }
-/* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
   margin: 0;

@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 const FreeConsultation = () => {
   return (
     <section className="py-16 px-4" style={{ backgroundColor: '#f9f7f2' }}>
@@ -37,6 +37,8 @@ const FreeConsultation = () => {
                 </div>
               </div>
               <div>
+               <Link
+               to='/enquire'>
                 <a
                   href="#contact"
                   className="px-8 py-3 font-bold text-lg uppercase tracking-wider inline-block"
@@ -47,6 +49,7 @@ const FreeConsultation = () => {
                 >
                   Get Free Consultation
                 </a>
+                </Link>
               </div>
             </div>
           </div>

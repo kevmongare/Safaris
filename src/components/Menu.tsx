@@ -97,14 +97,14 @@ const Header = () => {
             />
             
             <a href="#experiences" className="text-lg font-medium hover:text-[#c2a75c] transition">Experiences</a>
-            <Link
+            {/* <Link
             to ='/offers'>
             <a href="#offers" className="text-lg font-medium hover:text-[#c2a75c] transition">Offers</a>
             </Link>
             <Link
             to = '/blog'>
             <a href="#blog" className="text-lg font-medium hover:text-[#c2a75c] transition">Blog</a>
-            </Link>
+            </Link> */}
             <Link
             to = '/about'>
             <a href="#about" className="text-lg font-medium hover:text-[#c2a75c] transition">About</a>

@@ -8,8 +8,11 @@
   --secondary:#8c8479;
   --button:#c2a75c;
 }
-h1, h2, h3, body, p, span, button, a {
+h1, h2, h3, body, span, button, a {
   font-family: 'Playfair Display', serif !important;
+}
+p {
+  font-family: 'jost' !important;
 }
 
 .swiper-slide {
