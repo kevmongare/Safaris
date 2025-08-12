@@ -113,7 +113,7 @@ const Header = () => {
           </nav>
           <button 
               onClick={() => navigate('/enquire')}
-              className="bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
+              className="hidden md:block bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
             >
               Enquire
             </button>
