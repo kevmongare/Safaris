@@ -26,6 +26,9 @@ import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
 import AboutPage from './components/AboutPage';
 import FreeConsultation from './components/Consultation';
 
+//Packages
+import TenDayEastAfrica from './links/TravelStyles/Packages/EastAfrica/tenDayEastAfrica';
+
 // Layout component for Menu and Footer
 function App() {
   return (
@@ -54,7 +57,8 @@ function App() {
            <Route path='/masaimara' element = {<MasaiMara/>}/>
            <Route path='TravelStyleExpeditions' element = {<TravelStyleExpeditions/>}/>
           <Route path="/destination" element={<Destination/>} />
-          
+          <Route path="/destination" element={<Destination/>} />
+          <Route path="/tenDayEastAfrica" element={<TenDayEastAfrica/>} />
           <Route path="/About" element={<AboutPage/>} />
           
           
