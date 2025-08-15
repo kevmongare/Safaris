@@ -119,7 +119,7 @@ const Exclutions =[
     "International Flights"
 ]
 const tenDayEastAfrica = () =>{
-    const [card, cardState] =useState(false)
+    // const [card, cardState] =useState(false)
     const[inclustionCard1, inclutionState1] =useState(false)
     const[inclustionCard2, inclutionState2] =useState(false)
 return(
