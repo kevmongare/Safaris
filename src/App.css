@@ -44,9 +44,10 @@ body, p, span, button, a {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--secondary)!important;
+  color:white!important;
 }
 .swiper-pagination-bullet-active {
-  background: white !important;     /* Active bullet stays white */
+  background: #c2a75c !important;     /* Active bullet stays white */
+  margin-top: 10px;
   opacity: 1;                       /* Fully visible when active */
 }

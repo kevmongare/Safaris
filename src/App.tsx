@@ -9,7 +9,7 @@ import About from './components/About';
 import DestinationHighlights from './components/DestinationHighlights';
 import Hometravelstyles from './components/TravelStyles';
 import Hero from './components/hero';
-import Contact from './components/contact';
+
 import Footer from './components/footer';
 import Destination from './links/destinations/destinationdemo'
 import MasaiMara from './links/destinations/masaiMara'
@@ -22,6 +22,7 @@ import 'swiper/swiper-bundle.css';
 import Enquire from './components/EnquirePage'
 import FloatingEnquire from './components/floatingEnquire';
 import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
+
 
 import AboutPage from './components/AboutPage';
 import FreeConsultation from './components/Consultation';
@@ -45,7 +46,7 @@ function App() {
             <DestinationHighlights />
             <AboutUs />
             <Blog />
-            <Contact /> 
+            
             </>}/>
             
           

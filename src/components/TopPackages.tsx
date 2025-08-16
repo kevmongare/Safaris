@@ -68,10 +68,10 @@ const TopPackages = () =>{
                 src={packageKe.img}
                 
                 alt={`Top package ${index + 1}`}
-                className="w-full h-60 object-cover shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="w-full h-60 object-cover shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 hover:shaddow-lg"
               />
               </Link>
-              <h3 className="text-center mt-2 text-lg font-medium">{packageKe.name}</h3>
+              <h3 className="text-center mt-2 text-lg font-medium pb-10">{packageKe.name}</h3>
             </div>
           </SwiperSlide>
         ))}
