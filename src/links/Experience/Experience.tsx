@@ -74,10 +74,16 @@ const Experience = () => {
   return (
     <>
     <Scroll/>
-      <div className='mt-20 mx-auto'>
+      <div className='mx-auto  p-10'>
         {/* Navigation */}
-        <div className='bg-[var(--primary)]/90 backdrop-blur-xl mx-auto p-4 fixed z-30 text-white w-full top-20 shadow-md'>
-          <ul className='flex flex-wrap justify-center gap-2 md:gap-4 mx-auto'>
+
+        
+        {/* Experience Details */}
+        <div className=' mx-auto  pt-30'>
+                
+          <div className='max-w-6xl mx-auto bg-white shadow-md  overflow-hidden'>
+              <div className='max-w-6xl mx-auto bg-white shadow-md  overflow-hidden p-4 fixed z-30 text-gray-700 w-full top-20 '>
+              <ul className='flex flex-wrap justify-center gap-2 md:gap-4 mx-auto pt-5'>
             {Experiences.map((item, index) => (
               <li
                 key={index}
@@ -93,10 +99,6 @@ const Experience = () => {
             ))}
           </ul>
         </div>
-        
-        {/* Experience Details */}
-        <div className='bg-gray-50 mx-auto p-8 mt-30'>
-          <div className='max-w-6xl mx-auto bg-white shadow-md  overflow-hidden'>
             <div className='md:flex'>
               <div className='md:w-1/2 p-6 md:p-8 flex flex-col justify-center'>
                 <h1 className='text-3xl font-bold text-[var(--secondary)] mb-4'>

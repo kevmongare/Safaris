@@ -13,20 +13,19 @@ import 'swiper/swiper-bundle.css';
 
 // import { FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers,FaGlobeAfrica, FaMoneyBillWave, FaLanguage } from 'react-icons/fa';
 
-const Header = 'Rwanda'
-const Header1 = 'Facts About Rwanda:'
-const p1 = 'The birthplace of the safari, Kenya is a world-class wildlife destination, recommended both for experienced safari-goers and for those booking a first-time safari. The peerless Masai Mara National Reserve offers excellent big cat encounters and is the setting for the yearly wildebeest and zebra migration. Palm-lined beaches offer a perfect place to relax after a thrilling safari.'
-
-const Funfacts = [
+const Header = 'Tanzania'
+// const Header1 = 'Facts About Rwanda:'
+const p1 = 'Tanzania is a land of epic wildlife safaris, world-famous national parks, and stunning natural beauty. From the Serengeti plains to the heights of Kilimanjaro and the turquoise waters of Zanzibar, Tanzania offers a unique blend of adventure, culture, and relaxation.';
+// const Funfacts = [
   
-    "Population: 52 Million",
-    "Area: 580,370km²",
-    "Best Time To visit: All Year Round",
-    "Capital City: Nairobi",
-    "Language: English, Swahili"
+//     "Population: 52 Million",
+//     "Area: 580,370km²",
+//     "Best Time To visit: All Year Round",
+//     "Capital City: Nairobi",
+//     "Language: English, Swahili"
     
     
-]
+// ]
 const Top_Destinations =[
   {
     name : 'Masai Mara',
@@ -68,41 +67,58 @@ const Top_Destinations =[
 ]
 
 const Tanzania = () => {
-  return (
+return (
 
     <>
     <section>
-      <div className='h-[90vh]  bg-[url("./links/TravelStyles/AdventureExpeditions/ng-crater-luxury-tanzania-safaris-1.jpg")] bg-cover bg-center bg-fixed relative'>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50  to-transparent z-20 flex flex-col items-center justify-center text-white">
-
+      <div className='h-[90vh]  bg-[url("./links/countries/Tanzaniaimages/Tanzania.jpg")] bg-cover bg-center bg-fixed relative'>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70  to-transparent z-20 flex flex-col items-center justify-center text-white">
+      {/* <h1 className='text-6xl'>Karibu Kenya</h1> */}
+     
       </div>
       </div>
 
-     <div className='bg-white grid md:grid-cols-2 p-5 gap-8'>
-  <div className='flex flex-col justify-center p-4'>
-    <h1 className='text-4xl font-bold mb-4'>{Header}</h1>
-    <p className='max-w-3xl text-xl text-center md:text-left px-2 font-light'>{p1}</p>
-  </div>
+     <div className='bg-white text-center p-5 gap-8'>
+        <div className='flex flex-col justify-center p-10 mx-auto'>
+          <h1 className='text-4xl font-bold mb-4 '>{Header}</h1>
+          <p className='max-w-3xl text-xl text-center px-2 font-light mx-auto'>{p1}</p>
+        </div>
 
-  <div className='bg-[#f9f7f2] shadow-md px-4 flex flex-col p-4'>
+        {/* <div className='bg-[#f9f7f2] mx-auto text-center'>
+          <div className='p-10 mx-auto text-center'>
+            <h1 className='text-4xl font-bold mb-4'>{Header1}</h1>
+            <ul className='flex space-x-10 mx-auto'>
+              {Funfacts.map((item, index) =>(
+                <li key={index}>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div> */}
+
+
+
+
+  {/* <div className='bg-[#f9f7f2] shadow-md px-4  p-4'>
     <h1 className='text-4xl font-bold mb-6 text-center'>{Header1}</h1>
-    <ul className='max-w-3xl text-xl text-center md:text-left px-2 font-light'>{
+    <ul className='max-w-6xl text-xl text-center md:text-left px-2 font-light grid grid-cols-2 mx-auto space-x-5'>{
       Funfacts.map((facts, index) =>
       (
         <li key={index}
-        className="list-none">* {facts}</li>
+        className="list-none mx-auto">* {facts}</li>
         
       ))
     }</ul>
-  </div>
+  </div> */}
   </div>
 <div className=' bg-gray-100 p-10'>
   <h1 className='text-4xl text-center py-2 pb-8'>Top Destinations in Kenya</h1>
-  <div className='space-x-8 space-y-10 grid grid-cols-1 md:grid-cols-3 p-10 w-fit py-2 mx-auto'>
+  <div className='grid grid-cols-1 md:grid-cols-2 p-10 gap-10 w-fit mx-auto place-items-center'>
     {Top_Destinations.map((TDestination, index) =>(
-      <div key={index} className='bg-white  hover:shadow-lg overflow-hidden w-90 h-110 transition-transform duration-300 hover:-translate-y-3'>
+      <div key={index} className='bg-white  hover:shadow-lg overflow-hidden w-120 h-110 transition-transform duration-300 hover:-translate-y-3'>
         <div>
-        <img  src={TDestination.img} alt=""className='h-60 hover:scale-105'/>
+        <img  src={TDestination.img} alt=""className='h-60 w-120 hover:scale-105'/>
         </div>
         <div className='px-4 py-5 '>
           <h1 className='text-[var(--secondary)] text-2xl py-3 font-bold'>{TDestination.name}</h1>
@@ -122,5 +138,6 @@ const Tanzania = () => {
     </>
   );
 };
+
 
 export default Tanzania;

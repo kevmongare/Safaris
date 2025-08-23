@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/viagens logo-color.png';
+import WhiteLogo from '../assets/viagens logo-white.png'
 import DropdownMenu from '../mobile/DropdownMenu';
 import MobileMenu from '../mobile/MobileMenu';
 
@@ -19,14 +20,14 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#f9f7f2] shadow-md py-2' : 'bg-[#f9f7f2] shadow-md py-4'
+      scrolled ? 'bg-[#f9f7f2] shadow-md py-2' : 'bg-transparent text-white py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/">
             <img 
-              src={Logo} 
+              src={scrolled?Logo:WhiteLogo} 
               alt="Safari Africa Logo" 
               className="h-12 md:h-16 object-cover"
             />
@@ -122,7 +123,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-2xl text-[#c2a75c]"
+            className="md:hidden text-2xl text-[#c2a75c] z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? "✕" : "☰"}

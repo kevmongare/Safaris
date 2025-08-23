@@ -71,7 +71,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
   const navItems = ["Experiences", "Offers", "Blog", "About"];
 
   return (
-    <div className="md:hidden fixed inset-0 bg-white z-40 overflow-y-auto">
+    <div className="md:hidden fixed inset-0 bg-white z-50 overflow-y-auto text-gray-700">
       <div className="container mx-auto px-4 py-5">
         
         <div className="flex justify-between py-4 shaddow-sm">

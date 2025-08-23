@@ -6,7 +6,7 @@ const Hero = () => {
 
   return (
     <section 
-    className="h-screen bg-[url('./assets/safaris.webp')]  bg-cover bg-center relative"
+    className="h-screen z-30 bg-[url('./assets/ROADTRIP.png')] bg-fixed bg-cover bg-center relative"
     >
       <div className=" h-screen bg-black/60 flex items-center justify-center pt-20">
           <div className="container mx-auto px-4 text-center text-white">
