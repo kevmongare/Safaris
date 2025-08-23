@@ -85,7 +85,7 @@ const Uganda = () => {
 
     <>
     <section className='max-w-7xl mx-auto'>
-      <div className='h-[90vh]  bg-[url("./links/countries/ugandaimages/uganda.jpg")] bg-cover bg-center bg-fixed relative'>
+      <div className='h-[90vh]  bg-[url("./links/countries/ugandaimages/Uganda.jpg")] bg-cover bg-center bg-fixed relative'>
       <div className="absolute inset-0 bg-gradient-to-b from-black/50  to-transparent z-20 flex flex-col items-center justify-center text-white">
       {/* <h1 className='text-6xl'>Karibu Kenya</h1> */}
      
