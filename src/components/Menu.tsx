@@ -95,8 +95,10 @@ const Header = () => {
               ]}
               compact
             />
-            
+            <Link
+            to ='/Experiences'>
             <a href="#experiences" className="text-lg font-medium hover:text-[#c2a75c] transition">Experiences</a>
+            </Link>
             {/* <Link
             to ='/offers'>
             <a href="#offers" className="text-lg font-medium hover:text-[#c2a75c] transition">Offers</a>

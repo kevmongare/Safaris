@@ -67,7 +67,7 @@ const Top_Destinations =[
   }
 ]
 
-const KenyaWildlifePage = () => {
+const rwanda = () => {
   return (
 
     <>
@@ -124,4 +124,4 @@ const KenyaWildlifePage = () => {
   );
 };
 
-export default KenyaWildlifePage;
+export default rwanda;

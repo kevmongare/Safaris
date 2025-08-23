@@ -20,7 +20,7 @@ const ExpeditionsIntro = 'These are simply suggestions for the kind of holiday y
 const Top_Expeditions =[
   {
     name : '10 Days East Africa Highlights',
-    slug:'masaimara',
+    slug:'tenDayEastAfrica',
     img : Amboseli1,
     description: 'Nairobi | Lake Nakuru National Park | Masai Mara Game Reserve | Serengeti...',
     DestinationCTA : 'Explore'
