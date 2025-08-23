@@ -30,7 +30,7 @@ interface DropdownMenuProps {
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = false }) => {
   return (
-    <div className="group relative ">
+    <div className="group relative z-50">
       <button className="flex items-center text-lg font-medium hover:text-[#c2a75c] transition">
         {title} <span className="ml-1">▾</span>
       </button>
