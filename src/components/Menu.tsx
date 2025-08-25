@@ -116,8 +116,10 @@ const Header = () => {
           </nav>
           <button 
               onClick={() => navigate('/enquire')}
-              className="hidden md:block bg-[#c2a75c] text-white py-2 px-6 rounded-5 hover:bg-[#a99252] transition"
-            >
+              className={`hidden md:block   py-2 px-6 rounded-5 hover:bg-[#a99252] transition ${
+      scrolled ? 'bg-[#c2a75c] text-white' : 'bg-transparent text-white border-2 border-[#a99252] rounded-full'
+    }`}>
+
               Enquire
             </button>
 
