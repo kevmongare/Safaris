@@ -8,7 +8,7 @@ const Hero = () => {
     <section 
     className="h-screen z-30 bg-[url('./assets/ROADTRIP.png')] bg-fixed bg-cover bg-center relative"
     >
-      <div className=" h-screen bg-black/60 flex items-center justify-center pt-20">
+      <div className=" h-screen bg-gradient-to-b from-black/90 to-transparent flex items-center justify-center pt-20">
           <div className="container mx-auto px-4 text-center text-white">
               <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
               {txtMainHero}
