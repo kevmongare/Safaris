@@ -85,9 +85,20 @@ const Uganda = () => {
 
    <>
   <section className="max-w-7xl mx-auto">
-    <div className='h-[90vh] bg-[url("./links/countries/ugandaimages/Uganda.jpg")] bg-cover bg-center bg-fixed relative'>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent z-20 flex flex-col items-center justify-center text-white">
-        {/* <h1 className='text-6xl'>Karibu Kenya</h1> */}
+    <div className='h-screen bg-[url("./links/countries/ugandaimages/Uganda.jpg")] bg-cover bg-center bg-fixed relative'>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent z-20 flex flex-col items-center justify-center text-white">
+        {/* Content */}
+      <div className="relative z-10 text-center max-w-2xl px-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Discover Kenya Like Never Before 
+        </h1>
+        <p className="text-lg md:text-xl mb-8 text-gray-200">
+          Explore breathtaking safaris, cultural experiences, and hidden gems — all in one journey.
+        </p>
+        <button className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-2xl shadow-md hover:bg-yellow-300 transition">
+          Start Your Adventure
+        </button>
+      </div>
       </div>
     </div>
 
