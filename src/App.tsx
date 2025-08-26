@@ -29,6 +29,10 @@ import Rwanda from './links/countries/Rwanda'
 
 // Travelstyles
 import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
+import Familyholidays from './links/TravelStyles/familyHolidays';
+import WildlifeSafaris from './links/TravelStyles/WildlifeSafaris';
+import BushAndBeachSafaris from './links/TravelStyles/bushAndBeach';
+import OutBoundHolidays from './links/TravelStyles/outboundHolidays';
 
 //Experiences
 import Experience from './links/Experience/Experience';
@@ -62,7 +66,15 @@ function App() {
            <Route path='/enquire' element ={<Enquire />}/>
            <Route path='/rwanda' element ={<Rwanda/>} />
            <Route path='/masaimara' element = {<MasaiMara/>}/>
+           
+           
+           
            <Route path='TravelStyleExpeditions' element = {<TravelStyleExpeditions/>}/>
+           <Route path='wildlifeSafaris' element = {<WildlifeSafaris/>}/>
+           <Route path='familyHolidays' element = {<Familyholidays/>}/>
+           <Route path='bushAndBeachSafaris' element = {<BushAndBeachSafaris/>}/>
+           <Route path='outBoundHolidyas' element = {<OutBoundHolidays/>}/>
+
           <Route path="/destination" element={<Destination/>} />
           <Route path="/destination" element={<Destination/>} />
           <Route path="/tenDayEastAfrica" element={<TenDayEastAfrica/>} />

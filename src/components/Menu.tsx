@@ -102,12 +102,11 @@ const Header = () => {
             
               title="Travel Styles" 
               items={[
-                { title: "Wildlife Safaris", slug: "bush-lodges" },
-                { title: "Family Holidays", slug: "bush-lodges" },
+                { title: "Wildlife Safaris", slug: "wildlifeSafaris" },
+                { title: "Family Holidays", slug: "familyHolidays" },
                 { title: "Adventure Expeditions", slug: "TravelStyleExpeditions" },   
-                { title: "Bush & Beach Safaris", slug: "treehouses" },
-                { title: "Budget Safaris", slug: "eco-lodges" },
-                { title: "Outbound Holidays", slug: "mobile-camps" }
+                { title: "Bush & Beach Safaris", slug: "bushAndBeachSafaris" },
+                { title: "Outbound Holidays", slug: "outBoundHolidyas" }
               ]}
               compact
             />
@@ -131,8 +130,8 @@ const Header = () => {
           </nav>
           <button 
               onClick={() => navigate('/enquire')}
-              className={`hidden md:block   py-2 px-6 rounded-5 hover:bg-[#a99252] transition${
-      scrolled ? 'bg-[#c2a75c] text-white' : 'bg-transparent text-white border-2 border-[#a99252] rounded-full'
+              className={`hidden md:block   py-2 px-6 rounded-5 hover:bg-[#a99252] transition ${
+      scrolled ? 'bg-[#c2a75c] text-white shadow-md' : 'bg-transparent text-white border-2 border-[#a99252] rounded-full'
     }`}>
 
               Enquire
