@@ -4,10 +4,6 @@ import Amboseli1 from '../../links/TravelStyles/AdventureExpeditions/AmboseliPar
 import MeruNationalPark2 from '../../links/TravelStyles/AdventureExpeditions/MeruNationalPark.jpg'
 import RedElephantTsavo3 from '../../links/TravelStyles/AdventureExpeditions/Red-Elephants-at-Tsavo-West-National-Park-scaled.jpg'
 import SamburuNationalPark4 from '../../links/TravelStyles/AdventureExpeditions/samburu-national-reserve-5.jpg'
-import MountKenya5 from '../../links/TravelStyles/AdventureExpeditions/mtkenya.avif'
-import MaasaiMara6 from '../../links/TravelStyles/AdventureExpeditions/maasai-mara-wildlife.jpg';
-import Ngorongoro7 from '../../links/TravelStyles/AdventureExpeditions/ng-crater-luxury-tanzania-safaris-1.jpg'
-import TarangireNationalPark8 from '../../links/TravelStyles/AdventureExpeditions/Tarangire National Park.webp'
 
 import LatestPackages from '../../components/latestPackages';
 
