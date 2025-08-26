@@ -44,10 +44,15 @@ const Header = () => {
                   countrySlug: "kenya", 
                   places: [
                     { name: "Masai Mara", slug: "masaimara" },
-                    { name: "Nairobi NP", slug: "nairobi-national-park" }, 
-                    { name: "Diani Beach", slug: "diani-beach" },
-                    { name: "Lake Nakuru", slug: "lake-nakuru" }, 
-                    { name: "Mt. Kenya", slug: "mount-kenya" }
+                    { name: "Meru National Park", slug: "merunationalPark" }, 
+                    { name: "Lake Nakuru", slug: "lakenakuru" },
+                    { name: "Tsavo West", slug: "tsavowest" }, 
+                     { name: "Tsavo East", slug: "tsavoeast" }, 
+                    { name: "Amboseli", slug: "AmboseliNatioinalPark" },
+                    { name: "Nairobi National Park", slug: "NairobiNP" },
+                    { name: "Lake Naivasha", slug: "lakenaivasha" },
+                    { name: "Aberdare National Park", slug: "aberdarenationalpark" },
+                    { name: "Samburu National Park", slug: "Samburu-National-Park" }
                     ] 
                 },
                 { 
@@ -56,29 +61,38 @@ const Header = () => {
                   places: [
                     { name: "Serengeti", slug: "serengeti" }, 
                     { name: "Ngorongoro", slug: "ngorongoro-crater" }, 
-                    { name: "Zanzibar", slug: "zanzibar" }, 
-                    { name: "Arusha", slug: "arusha" }, 
-                    { name: "Lake Manyara", slug: "lake-manyara" }
+                    { name: "Gombe Stream", slug: "gombestream" }, 
+                    { name: "Tarangire National Park", slug: "lTarangire-National-Park" },
+                    { name: "Selous Game Reserve", slug: "Selous-Game-Reserve" },
+                    { name: "Mahale Mountains", slug: "Mahale-Mountains" }, 
+                    { name: "Lake Manyara", slug: "Lake-Manyara" },
+                    { name: "Ruaha National Park", slug: "Ruaha-National-Park" },   
                   ] 
                 },
                 { 
                   country: "Uganda", 
                   countrySlug: "uganda", 
                   places: [
-                    { name: "Bwindi Forest", slug: "bwindi-impenetrable-forest" }, 
-                    { name: "Kibale NP", slug: "kibale-national-park" }, 
-                    { name: "Murchison Falls", slug: "murchison-falls" }, 
-                    { name: "Queen Elizabeth NP", slug: "queen-elizabeth-national-park" }
+                    { name: "Murchison Falls National Park", slug: "bwindi-impenetrable-forest" }, 
+                    { name: "Kibale Forest National Park", slug: "kibale-national-park" }, 
+                    { name: "Semliki National Park", slug: "Semliki-National-Park" }, 
+                    { name: "Queen Elizabeth National Park", slug: "queen-elizabeth-national-park" },
+                    { name: "Lake Mburo", slug: "Lake-Mburo" }, 
+                    { name: "Kidepo Valley National Park", slug: "Kidepo-Valley-National-Park" }, 
+                    { name: "Bwindi Impenetrable Forest", slug: "Bwindi-Impenetrable-Forest" }, 
+                    { name: "Mgahinga Gorilla National Park", slug: "murchison-falls" }, 
+
+
                   ] 
                 },
                 { 
                   country: "Rwanda", 
                   countrySlug: "rwanda", 
                   places: [
-                    { name: "Volcanoes NP", slug: "volcanoes-national-park" }, 
-                    { name: "Nyungwe Forest", slug: "nyungwe-forest" }, 
-                    { name: "Akagera NP", slug: "akagera-national-park" }, 
-                    { name: "Kigali City", slug: "kigali" }
+                    { name: "Volcanoes National Park", slug: "volcanoes-national-park" }, 
+                    { name: "Lake Kivu", slug: "Lake-Kivu" }, 
+                    { name: "Akagera National Park", slug: "akagera-national-park" }, 
+                    { name: "Nyungwe Forest National Park", slug: "Nyungwe-Forest-National-Park" }
                   ] 
                 }
               ]}
@@ -88,11 +102,12 @@ const Header = () => {
             
               title="Travel Styles" 
               items={[
-                { title: "Adventure Expeditions", slug: "TravelStyleExpeditions" },
+                { title: "Wildlife Safaris", slug: "bush-lodges" },
                 { title: "Family Holidays", slug: "bush-lodges" },
-                { title: "Wildlife Safaris", slug: "treehouses" },
+                { title: "Adventure Expeditions", slug: "TravelStyleExpeditions" },   
+                { title: "Bush & Beach Safaris", slug: "treehouses" },
                 { title: "Budget Safaris", slug: "eco-lodges" },
-                { title: "Tribal Expeditions", slug: "mobile-camps" }
+                { title: "Outbound Holidays", slug: "mobile-camps" }
               ]}
               compact
             />
@@ -116,7 +131,7 @@ const Header = () => {
           </nav>
           <button 
               onClick={() => navigate('/enquire')}
-              className={`hidden md:block   py-2 px-6 rounded-5 hover:bg-[#a99252] transition ${
+              className={`hidden md:block   py-2 px-6 rounded-5 hover:bg-[#a99252] transition${
       scrolled ? 'bg-[#c2a75c] text-white' : 'bg-transparent text-white border-2 border-[#a99252] rounded-full'
     }`}>
 

@@ -34,8 +34,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
       <button className="flex items-center text-lg font-medium hover:text-[#c2a75c] transition">
         {title} <span className="ml-1">▾</span>
       </button>
-      <div className={`absolute pt-10 top-full left-0 hidden group-hover:flex bg-white/90 shadow-2xl p-6 ${
-        compact ? 'w-[400px]' : 'w-[800px]'
+      <div className={`absolute pt-10 top-full left-0 hidden group-hover:flex bg-white/95 shadow-2xl p-6 -ml-55 ${
+        compact ? 'w-[400px]' : 'w-[1020px]'
       } justify-between z-50`}>
         {compact ? (
           <>
@@ -90,7 +90,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items, compact = fal
                       {item.countrySlug ? (
                         <Link 
                           to={`/${place.slug}`}  // Using anchor links
-                          className="hover:text-[#c2a75c] block"
+                          className="hover:text-[#c2a75c] block hover:underline"
                         >
                           {place.name}
                         </Link>
