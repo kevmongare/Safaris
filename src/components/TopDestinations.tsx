@@ -9,7 +9,7 @@ const Destinations = () => {
       id: 1,
       name: "Serengeti National Park",
       location: "Tanzania",
-      price: "From $1,899",
+       
       description: "Witness the Great Migration and experience the quintessential African safari.",
       image: SafariTruck
     },
@@ -17,7 +17,7 @@ const Destinations = () => {
       id: 2,
       name: "Maasai Mara",
       location: "Kenya",
-      price: "From $2,199",
+      
       description: "Home to the Big Five and the spectacular wildebeest migration crossing.",
       image: Safari
     },
@@ -25,15 +25,15 @@ const Destinations = () => {
       id: 3,
       name: "Okavango Delta",
       location: "Botswana",
-      price: "From $3,499",
+      
       description: "Explore the world's largest inland delta with unique water-based safaris.",
       image: wildlife
     }
   ];
 
   return (
-    <section id="destinations" className="py-20 bg-white/90">
-      <div className="container mx-auto px-4">
+    <section id="destinations" className="py-10 bg-white ">
+      <div className="container px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-[var(--secondary)]">
             East Africa Top Destinations
@@ -59,7 +59,7 @@ const Destinations = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{destination.name}</h3>
                 <p className="text-gray-600 mb-2">{destination.location}</p>
-                <p className="text-[var(--secondary)] font-semibold mb-3">{destination.price}</p>
+                {/* <p className="text-[var(--secondary)] font-semibold mb-3">{destination.price}</p> */}
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <button className="border-2 border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-white font-medium py-2 px-6 rounded-full transition duration-300">
                   View Package

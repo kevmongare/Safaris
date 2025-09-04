@@ -8,8 +8,10 @@ import Menu from './components/Menu';
 import Blog from '../src/components/blog';
 import Whatsapp from './components/whatsapp';
 import AboutUs from './components/aboutUs';
+import GallerySlider from './components/GallerySlider';
 import TopDestinations from './components/TopDestinations';
 import About from './components/About';
+
 import DestinationHighlights from './components/DestinationHighlights';
 import Hometravelstyles from './components/TravelStyles';
 import Hero from './components/hero';
@@ -51,6 +53,7 @@ function App() {
             <Route path="/" element={<>
             <Hero />
              <About />
+             <GallerySlider/>
             <TopDestinations />
             <Hometravelstyles />
             <DestinationHighlights />

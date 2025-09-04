@@ -1,11 +1,11 @@
-import Cheetah from '../assets/safaris.jpeg'
-export default function FocusSafariSection() {
+// import Cheetah from '../assets/safaris.jpeg'
+export default function About() {
   return (
     <section className="bg-white py-16 px-6 shadow-sm">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10 ">
+      <div className="max-w-7xl mx-auto text-center items-center gap-10 ">
         {/* Text Section */}
         <div>
-          <h1 className='text-[var(--primary)] -mt-10 mb-5 underline'>Experience the Extraordinary</h1>
+          {/* <h1 className='text-[var(--primary)] -mt-10 mb-5 underline'>Experience the Extraordinary</h1> */}
           <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
             Viagens Africa {" "}
             <span className="relative inline-block">
@@ -13,15 +13,15 @@ export default function FocusSafariSection() {
               <span className="absolute left-0 bottom-1 w-full h-2 bg-yellow-400 -z-10"></span>
             </span>
           </h2>
-          <p className="text-lg text-gray-800 space-y-4">
-            We know wildlife is the heart of your safari,<span className="underline decoration-yellow-400 font-bold"> Viagens Africa Safaris </span> is a dynamic and a fast growing Tours and Ticketing Company. That’s why every guest enjoys a{" "}
+          <p className="text-md text-gray-800 space-y-4 max-w-4xl mx-auto p-5">
+            We know wildlife is the heart of your safari, Viagens Africa Safaris  is a dynamic and a fast growing Tours and Ticketing Company. That’s why every guest enjoys a{" "}
             
               private and professional local guide
             
             , giving you the freedom to tailor your game drives.We{" "}
-            <span className="underline decoration-yellow-400">
+          
               offer off the beaten track 
-            </span>{" "}
+            {" "}
             – Inbound and Outbound travel products.
             {/* {" "}
             <span className="underline decoration-yellow-400">
@@ -34,15 +34,18 @@ export default function FocusSafariSection() {
             and less time worrying about anything else. */}
           </p>
         </div>
+        
          {/* Image from earlier URL */}
-        <div>
+        {/* <div>
           <img
             src= {Cheetah}
             alt="Safari at Sunset"
             className="w-full h-auto  shadow-md"
           />
-        </div>
+        </div> */}
       </div>
+    
+
     </section>
   );
 }

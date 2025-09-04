@@ -1,47 +1,16 @@
-// export default function footer(){
-//     return(
-//         <>
-//                     {/* <!-- Footer --> */}
-//             <footer className="bg-[var(--primary)] text-white p-6 mt-12 ">
-//                 <div className="flex flex-col md:flex-row justify-between mx-auto max-w-7xl">
-//                 <div>
-//                     <h4 className="font-bold">Quick Links</h4>
-//                     <ul>
-//                     <li><a href="#" className="text-sm">Home</a></li>
-//                     <li><a href="#" className="text-sm">Contact</a></li>
-//                     <li><a href="#" className="text-sm">Privacy Policy</a></li>
-//                     </ul>
-//                 </div>
-//                 <div>
-//                     <h4 className="font-bold">Contact Us</h4>
-//                     <p className="text-sm">Nairobi, Kenya</p>
-//                     <p className="text-sm">info@viagensafricasafaris.com</p>
-//                 </div>
-//                 <div>
-//                     <h4 className="font-bold">Follow Us</h4>
-//                     <div className="space-x-2">
-//                     <a href="#" className="text-sm">Facebook</a>
-//                     <a href="#" className="text-sm">Instagram</a>
-//                     </div>
-//                 </div>
-//                 </div>
-//             </footer>
-//         </>
-//     )
-// }
-import Logo from '../assets/logo.png';
+import Logo from '../assets/viagens logo-white.png';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--primary)] text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-[url('./assets/Main/hero.jpg')] bg-cover bg-fixed text-white  ">
+      <div className="container mx-auto px-4 bg-gradient-to-b from-black/90 via-70% to-transparent)] pt-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <img 
               src={Logo} 
               alt="Safari Africa Logo" 
-              className="h-12 md:h-16 object-cover bg-white p-5 rounded-xl"
+              className="h-14 md:h-20 object-cover  p-5 rounded-xl"
             />
           
             <p className="mb-4 text-gray-300">
