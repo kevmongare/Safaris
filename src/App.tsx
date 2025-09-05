@@ -21,13 +21,23 @@ import FreeConsultation from './components/Consultation';
 import Enquire from './components/EnquirePage'
 // import FloatingEnquire from './components/floatingEnquire';
 
-//Destinations
-import Destination from './links/destinations/destinationdemo'
-import MasaiMara from './links/destinations/masaiMara'
+//countries
 import Kenya from './links/countries/Kenya';
 import Tanzania from './links/countries/Tanzania';
 import Uganda from  './links/countries/Uganda'
 import Rwanda from './links/countries/Rwanda'
+
+//Destinations
+import MasaiMara from './links/destinations/KenyanDestination/masaiMara'
+import MeruNlp from './links/destinations/KenyanDestination/MeruNLLP';
+import LakeNakuru from './links/destinations/KenyanDestination/LakeNakuru';
+import TsavoWest from './links/destinations/KenyanDestination/TsavoWest';
+import TsavoEast from './links/destinations/KenyanDestination/TsavoEast';
+import NairobiNLP from './links/destinations/KenyanDestination/NairobiNationalPark';
+import Amboseli from './links/destinations/KenyanDestination/Amboseli';
+import LakeNaivasha from './links/destinations/KenyanDestination/LakeNaivasha';
+import Abardare from './links/destinations/KenyanDestination/AberdareNLP';
+import Samburu from './links/destinations/KenyanDestination/SamburuNLP';
 
 // Travelstyles
 import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
@@ -68,7 +78,21 @@ function App() {
            <Route path="/uganda" element={<Uganda />} />
            <Route path='/enquire' element ={<Enquire />}/>
            <Route path='/rwanda' element ={<Rwanda/>} />
+
+           //Kenyan Destinations
            <Route path='/masaimara' element = {<MasaiMara/>}/>
+           <Route path='/merunationalPark' element = {<MeruNlp/>}/>
+           <Route path='/lakenakuru' element = {<LakeNakuru/>}/>
+           <Route path='/tsavowest' element = {<TsavoWest/>}/>
+           <Route path='/tsavoeast' element = {<TsavoEast/>}/>
+           <Route path='/AmboseliNatioinalPark' element = {<Amboseli/>}/>
+           <Route path='/NairobiNP' element = {<NairobiNLP/>}/>
+           <Route path='/lakenaivasha' element = {<LakeNaivasha/>}/>
+           <Route path='/aberdarenationalpark' element = {<Abardare/>}/>
+           <Route path='/Samburu-National-Park' element = {<Samburu/>}/>
+
+           
+
            
            
            
@@ -78,8 +102,7 @@ function App() {
            <Route path='bushAndBeachSafaris' element = {<BushAndBeachSafaris/>}/>
            <Route path='outBoundHolidyas' element = {<OutBoundHolidays/>}/>
 
-          <Route path="/destination" element={<Destination/>} />
-          <Route path="/destination" element={<Destination/>} />
+         
           <Route path="/tenDayEastAfrica" element={<TenDayEastAfrica/>} />
           <Route path="/Experiences" element={<Experience/>} />
           <Route path="/About" element={<AboutPage/>} />
