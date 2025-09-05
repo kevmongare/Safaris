@@ -4,8 +4,6 @@ import Uganda from "../links/countries/ugandaimages/Uganda.jpg";
 import Tanzania from "../links/countries/Tanzaniaimages/Tanzania.jpg";
 import Rwanda from "../links/countries/rwandaimages/rwanda2.jpg"
 
-import { Link } from "react-router-dom";
-
 const images = [kenya, Uganda, Rwanda, Tanzania]; // add as needed
 
 const countryData = [
