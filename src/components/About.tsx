@@ -1,8 +1,9 @@
 // import Cheetah from '../assets/safaris.jpeg'
 export default function About() {
   return (
-    <section className="bg-white py-16 px-6 shadow-sm">
-      <div className="max-w-7xl mx-auto text-center items-center gap-10 ">
+    <section className=" bg-white py-15 px-6 ">
+     
+      <div className="max-w-7xl mx-auto text-center items-center gap-5 ">
         {/* Text Section */}
         <div>
           {/* <h1 className='text-[var(--primary)] -mt-10 mb-5 underline'>Experience the Extraordinary</h1> */}
@@ -13,16 +14,10 @@ export default function About() {
               <span className="absolute left-0 bottom-1 w-full h-2 bg-yellow-400 -z-10"></span>
             </span>
           </h2>
-          <p className="text-md text-gray-800 space-y-4 max-w-4xl mx-auto p-5">
-            We know wildlife is the heart of your safari, Viagens Africa Safaris  is a dynamic and a fast growing Tours and Ticketing Company. That’s why every guest enjoys a{" "}
-            
-              private and professional local guide
-            
-            , giving you the freedom to tailor your game drives.We{" "}
-          
-              offer off the beaten track 
-            {" "}
-            – Inbound and Outbound travel products.
+          <p className="text-md text-gray-800 space-y-4 max-w-5xl mx-auto p-2 whitespace-pre-line font-light">
+            Our love for nature necessitated the passion for travel. Africa has amazing people, beautiful sceneries & wildlife and wonderful culture. It is for this reason that we would like the world to come and witness what the gem Africa is for themselves. Whoever comes to Africa falls in love with it and would never want to leave!
+
+We have lived here since our birth and travelled extensively especially within East Africa Region, where our specialty is. Having been trained at Africa’s leading hospitality college – The Kenya Utalii College and several years of work experience at East Africa’s leading Tour Operators, we have the knowledge, skills, expertise and more so confidence to arrange the best and authentic safaris that provide life time memories for our clients….at Mumo Tours and Travel, we do not create the same safari twice!
             {/* {" "}
             <span className="underline decoration-yellow-400">
               incredible big cat sightings
@@ -49,33 +44,3 @@ export default function About() {
     </section>
   );
 }
-
-// import wildlife from '../assets/elephant.avif'
-// export default function details(){
-//     return(
-//         <>
-//         <section className="flex flex-col md:flex-row w-full h-screen">
-//             {/* Left Side: Image */}
-//             <div className="w-full md:w-1/2 h-64 md:h-full">
-//                 <img
-//                 src={wildlife}
-//                 alt="Safari vehicle"
-//                 className="w-full h-full object-cover"
-//                 />
-//             </div>
-
-//             {/* Right Side: Text */}
-//             <div className="w-full md:w-1/2 bg-[var(--primary)] text-white flex flex-col justify-center items-center p-10 text-center">
-//                 <h2 className="text-2xl md:text-4xl font-medium leading-snug">
-//                 Book any combination of <br />
-//                 Asilia properties for <br />
-//                 <span className="font-semibold text-3xl">7+ consecutive nights</span>
-//                 <br />
-//                 and all in-country transfers are on us!
-//                 </h2>
-//                 <p className="mt-8 italic text-lg">— All Asilia</p>
-//             </div>
-//             </section>
-//         </>
-//     )
-// }
