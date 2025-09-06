@@ -62,7 +62,7 @@ const Header = () => {
                     { name: "Serengeti", slug: "serengeti" }, 
                     { name: "Ngorongoro", slug: "ngorongoro-crater" }, 
                     { name: "Gombe Stream", slug: "gombestream" }, 
-                    { name: "Tarangire National Park", slug: "lTarangire-National-Park" },
+                    { name: "Tarangire National Park", slug: "Tarangire-National-Park" },
                     { name: "Selous Game Reserve", slug: "Selous-Game-Reserve" },
                     { name: "Mahale Mountains", slug: "Mahale-Mountains" }, 
                     { name: "Lake Manyara", slug: "Lake-Manyara" },
@@ -73,14 +73,14 @@ const Header = () => {
                   country: "Uganda", 
                   countrySlug: "uganda", 
                   places: [
-                    { name: "Murchison Falls National Park", slug: "bwindi-impenetrable-forest" }, 
+                    { name: "Murchison Falls National Park", slug: "murchison-falls" }, 
                     { name: "Kibale Forest National Park", slug: "kibale-national-park" }, 
                     { name: "Semliki National Park", slug: "Semliki-National-Park" }, 
                     { name: "Queen Elizabeth National Park", slug: "queen-elizabeth-national-park" },
                     { name: "Lake Mburo", slug: "Lake-Mburo" }, 
                     { name: "Kidepo Valley National Park", slug: "Kidepo-Valley-National-Park" }, 
                     { name: "Bwindi Impenetrable Forest", slug: "Bwindi-Impenetrable-Forest" }, 
-                    { name: "Mgahinga Gorilla National Park", slug: "murchison-falls" }, 
+                    { name: "Mgahinga Gorilla National Park", slug: "Mgahinga-Gorilla-National-Park" }, 
 
 
                   ] 

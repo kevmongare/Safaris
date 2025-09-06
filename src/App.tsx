@@ -27,7 +27,7 @@ import Tanzania from './links/countries/Tanzania';
 import Uganda from  './links/countries/Uganda'
 import Rwanda from './links/countries/Rwanda'
 
-//Destinations
+//Destinations Kenyan
 import MasaiMara from './links/destinations/KenyanDestination/masaiMara'
 import MeruNlp from './links/destinations/KenyanDestination/MeruNLLP';
 import LakeNakuru from './links/destinations/KenyanDestination/LakeNakuru';
@@ -38,6 +38,32 @@ import Amboseli from './links/destinations/KenyanDestination/Amboseli';
 import LakeNaivasha from './links/destinations/KenyanDestination/LakeNaivasha';
 import Abardare from './links/destinations/KenyanDestination/AberdareNLP';
 import Samburu from './links/destinations/KenyanDestination/SamburuNLP';
+
+//Destinations Tanzania
+import Serengeti from './links/destinations/TanzaniaDestinations/Serengeti';
+import Ngorongoro from './links/destinations/TanzaniaDestinations/Ngorongoro';
+import GombeStream from './links/destinations/TanzaniaDestinations/GombeStream';
+import Tarangire from './links/destinations/TanzaniaDestinations/TarangireNLP';
+import Selous from './links/destinations/TanzaniaDestinations/Selous';
+import Mahale from './links/destinations/TanzaniaDestinations/Mahale';
+import LakeManyara from './links/destinations/TanzaniaDestinations/LakeManyara';
+import Ruaha from './links/destinations/TanzaniaDestinations/Ruaha';
+
+//Destinations Uganda
+import Murchison from './links/destinations/UgandaDestinations/Murchison';
+import Kibale from './links/destinations/UgandaDestinations/Kibale';
+import Semliki from './links/destinations/UgandaDestinations/Semliki';
+import Queen from './links/destinations/UgandaDestinations/QueenElizabethNLP';
+import Mburo from './links/destinations/UgandaDestinations/LakeMburo';
+import Kidepo from './links/destinations/UgandaDestinations/Kidepo';
+import Bwindi from './links/destinations/UgandaDestinations/bwindi';
+import Mgahinga from './links/destinations/UgandaDestinations/Mgahinga';
+
+//Destinationis Rwanda
+import Nyungwe from './links/destinations/RwandaDestinations/NyungweForestNationalPark';
+import LakeKivu from './links/destinations/RwandaDestinations/LakeKivu';
+import Volcanoes from './links/destinations/RwandaDestinations/VolcanoesNationalPark';
+import Akagera from './links/destinations/RwandaDestinations/AkageraNationalPark';
 
 // Travelstyles
 import TravelStyleExpeditions from './links/TravelStyles/Expeditions';
@@ -91,9 +117,32 @@ function App() {
            <Route path='/aberdarenationalpark' element = {<Abardare/>}/>
            <Route path='/Samburu-National-Park' element = {<Samburu/>}/>
 
-           
+           //Tanzania destinations
+           <Route path='/serengeti' element = {<Serengeti/>}/>
+           <Route path='/ngorongoro-crater' element = {<Ngorongoro/>}/>
+           <Route path='/gombestream' element = {<GombeStream/>}/>
+           <Route path='/Tarangire-National-Park' element = {<Tarangire/>}/>
+           <Route path='/Selous-Game-Reserve' element = {<Selous/>}/>
+           <Route path='/Mahale-Mountains' element = {<Mahale/>}/>
+           <Route path='/Lake-Manyara' element = {<LakeManyara/>}/>
+           <Route path='/Ruaha-National-Park' element = {<Ruaha/>}/>
 
-           
+           //Uganda Destinations
+           <Route path='/murchison-falls' element = {<Murchison/>}/>
+           <Route path='/kibale-national-park' element = {<Kibale/>}/>
+           <Route path='/Semliki-National-Park' element = {<Semliki/>}/>
+           <Route path='/queen-elizabeth-national-park' element = {<Queen/>}/>
+           <Route path='/Lake-Mburo' element = {<Mburo/>}/>
+           <Route path='/Kidepo-Valley-National-Park' element = {<Kidepo/>}/>
+           <Route path='/Bwindi-Impenetrable-Forest' element = {<Bwindi/>}/>
+           <Route path='/Mgahinga-Gorilla-National-Park' element = {<Mgahinga/>}/>
+
+           //Rwanda Destinations
+           <Route path='/Nyungwe-Forest-National-Park' element = {<Nyungwe/>}/>
+           <Route path='/Lake-Kivu' element = {<LakeKivu/>}/>
+           <Route path='/volcanoes-national-park' element = {<Volcanoes/>}/>
+           <Route path='/akagera-national-park' element = {<Akagera/>}/>
+
            
            
            <Route path='TravelStyleExpeditions' element = {<TravelStyleExpeditions/>}/>
