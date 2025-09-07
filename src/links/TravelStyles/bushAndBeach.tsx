@@ -47,7 +47,7 @@ const BushAndBeachSafaris = () =>{
     <>
     <div>
       {/* hero */}
-      <div className='h-[90vh] bg-cover bg-center bg-fixed relative bg-[url("./assets/AdventuresExpeditions.webp")]'>
+      <div className='h-[98vh] bg-cover bg-center bg-fixed relative bg-[url("./Beach.jpg")]'>
      <div className="absolute inset-0 bg-gradient-to-b from-black/90  to-transparent z-20 flex flex-col items-center justify-center text-white">
       {/* <h1 className='text-6xl'>{Header}</h1> */}
       </div>

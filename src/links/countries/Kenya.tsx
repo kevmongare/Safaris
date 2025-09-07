@@ -5,7 +5,7 @@ import Amboseli from '../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Ambose
 import Meru from '../../assets/Kenya/Meru/images (2).jpeg'
 import Diani from '../../assets/Kenya/Diani/diani-sunbeds-1.jpg'
 import Nairobi from '../../assets/Kenya/Nairobi/Nairobi-National-Park-700x450-1.jpg'
-import TopPackages from '../../components/TopPackages';
+
 // import { BsPeopleFill } from "react-icons/bs";
 
 
@@ -124,6 +124,7 @@ const Kenya = () => {
               </p>
               <Link
                 to={`/${TDestination.slug}`}
+                title={TDestination.name}
                 className="cursor-pointer underline text-[var(--button)]"
               >
                 {TDestination.DestinationCTA}
@@ -134,7 +135,7 @@ const Kenya = () => {
       </div>
     </div>
 
-    <TopPackages />
+    
   </section>
 </>
 

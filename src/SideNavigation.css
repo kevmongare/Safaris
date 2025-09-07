@@ -1,0 +1,188 @@
+/* SideNavigation.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #f9f7f2;
+  --primary: #3a3a2c;
+  --secondary: #8c8479;
+  --button: #c2a75c;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Higher than requested z-index of 50 */
+}
+
+.info-container {
+  width: 85%;
+  height: 85%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--button);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background-color: var(--primary);
+  transform: rotate(90deg);
+}
+
+.sidebar {
+  width: 30%;
+  background-color: var(--primary);
+  color: white;
+  padding: 40px 0;
+  overflow-y: auto;
+}
+
+.logo {
+  padding: 0 30px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-items {
+  list-style: none;
+}
+
+.nav-item {
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background-color: var(--button);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-icon {
+  margin-right: 15px;
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.content {
+  width: 70%;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: var(--background);
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--primary);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--button);
+}
+
+.content p {
+  margin-bottom: 20px;
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
+.content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info .icon {
+  margin-right: 15px;
+  font-size: 20px;
+  width: 24px;
+}
+
+@media (max-width: 900px) {
+  .info-container {
+    flex-direction: column;
+    width: 95%;
+    height: 95%;
+  }
+  
+  .sidebar {
+    width: 100%;
+    padding: 20px 0;
+    max-height: 40%;
+  }
+  
+  .content {
+    width: 100%;
+    padding: 30px;
+    max-height: 60%;
+  }
+  
+  .nav-items {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+  
+  .nav-item {
+    padding: 10px 20px;
+    white-space: nowrap;
+  }
+}

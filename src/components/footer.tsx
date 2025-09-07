@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaEnvelope, Fa
 
 const Footer = () => {
   return (
-    <footer className="bg-[url('./assets/Main/hero.jpg')] bg-cover bg-fixed text-white  ">
+    <footer className="bg-[var(--primary)] bg-cover bg-fixed text-white  ">
       <div className="container mx-auto px-4 bg-gradient-to-b from-black/90 via-70% to-transparent)] pt-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
