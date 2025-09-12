@@ -22,7 +22,7 @@ const Top_Expeditions =[
     name : '10 Days East Africa Highlights',
     slug:'tenDayEastAfrica',
     img : Amboseli1,
-    description: 'Nairobi | Lake Nakuru National Park | Masai Mara Game Reserve | Serengeti National Park | Ngorongoro Crater | Amboseli National Park | Taita Hills | Depart',
+    description: 'Nairobi | Lake Nakuru National Park | Masai Mara Game Reserve | Serengeti National Park | Ngorongoro Crater',
     DestinationCTA : 'Explore'
   },
     {

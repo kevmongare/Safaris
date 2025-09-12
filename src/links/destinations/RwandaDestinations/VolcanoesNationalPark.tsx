@@ -5,12 +5,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // fallback for older versions
 
 //top destinations
-import masai from  '../../../assets/masai-mara-wildlife.jpg'
-import LakeNakuru from '../../../assets/Kenya/Lakenakuru/The-Wonders-of-Lake-Nakuru-National-Park--750x389.jpg'
-import Amboseli1 from '../../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Amboseli-National-Park-1024x683.webp'
-import Meru from '../../../assets/Kenya/Meru/images (2).jpeg'
-import Diani from '../../../assets/Kenya/Diani/diani-sunbeds-1.jpg'
-import Nairobi from '../../../assets/Kenya/Nairobi/Nairobi-National-Park-700x450-1.jpg'
+// import Volcanoes from  '../../links/countries/rwandaimages/volcano.jpg'
+import LakeKivu from '../../../links/countries/rwandaimages/Lake_Kivu_Serena_Hotel_Beach-1.jpg'
+import AkageraNationalpark from '../../../links/countries/rwandaimages/akageranationalPark.webp'
+import Nyungwe from '../../../links/countries/rwandaimages/rwanda1.jpg'
+
 
 // slider
 import elephant from '../../../assets/elephant.avif';
@@ -35,44 +34,36 @@ const whatToExpect = "The Masai Mara Game Reserve is one of the best places in A
 
 const SimilarTopDestinations ="Other Top Destinations in Kenya"
 const Top_Destinations =[
-  {
-    name : 'Amboseli',
-    slug:'kenya',
-    img : masai,
-    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
-    DestinationCTA : 'Explore'
-  },
+  // {
+  //   name : 'Volcanoes National Park',
+  //   slug:'volcanoes-national-park',
+  //   img : Volcanoes,
+  //   description: 'Volcanoes National Park lies in north-western Rwanda and borders Virunga National Park',
+  //   DestinationCTA : 'Explore'
+  // },
     {
-    name : 'Amboseli',
-    img : Amboseli1,
+    name : 'Lake Kivu',
+    img : LakeKivu,
+    slug:'Lake-Kivu',
     description: 'Famous for its large herds of elephants and is the best place to get close to free-ranging elephants worldwide.',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Lake Nakuru National Park',
-    img : LakeNakuru,
+    name : ' Akagera National Park',
+    slug:'akagera-national-park',
+    img : AkageraNationalpark,
     description: "Lake Nakuru is a birdwatcher's paradise and is famous internationally for its thousands and sometimes millions of flamingos",
     DestinationCTA : 'Explore'
   },
   {
-    name : 'Meru National Park',
-    img : Meru,
+    name : ' Nyungwe Forest National Park',
+    img : Nyungwe,
+    slug:'Nyungwe-Forest-National-Park',
     description: 'Remarkable, remote, unspoiled terrain and rugged nature. The park is picturesque due to its diverse nature',
-    DestinationCTA : 'Explore'
-  },
-    {
-    name : 'Diani',
-    img : Diani,
-    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
-    DestinationCTA : 'Explore'
-  },
-    {
-    name : 'Nairobi National Park',
-    img : Nairobi,
-    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   }
 ]
+
 const Activities =[
   {
     name: "Wildebeest Migration",
@@ -155,7 +146,7 @@ const Volcanoes = () =>{
           </div>
          </div>
        
-      <div className="py-10 bg-white">
+      <div className="py-10 bg-white mx-auto">
         <h2 className="text-center text-gray-600 text-5xl mb-6">Masai Mara Gallery</h2>
        <Swiper
         spaceBetween={30}
@@ -200,7 +191,7 @@ const Volcanoes = () =>{
       />
       </div>
       {/* //Top Destination */}
-       <div className="p-10 bg-gray-100">
+       <div className="p-10 bg-gray-100 ">
       <h1 className="text-center text-4xl font-semibold mb-8">{SimilarTopDestinations}</h1>
 
       <Swiper
@@ -219,7 +210,8 @@ const Volcanoes = () =>{
         className="w-full max-w-7xl mx-auto"
       >
         {Top_Destinations.map((destination, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index}
+          className='mx-auto'>
             <div className="p-4">
                <Link
           to={`/${destination.slug}`}>

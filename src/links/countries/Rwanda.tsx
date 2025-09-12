@@ -3,7 +3,6 @@ import Volcanoes from  '../../links/countries/rwandaimages/volcano.jpg'
 import LakeKivu from '../../links/countries/rwandaimages/Lake_Kivu_Serena_Hotel_Beach-1.jpg'
 import AkageraNationalpark from '../../links/countries/rwandaimages/akageranationalPark.webp'
 import Nyungwe from '../../links/countries/rwandaimages/rwanda1.jpg'
-import TopPackages from '../../components/TopPackages';
 // import { BsPeopleFill } from "react-icons/bs";
 
 
@@ -28,7 +27,7 @@ const p1 = 'Rwanda is a breathtaking destination where nature, wildlife, and cul
 const Top_Destinations =[
   {
     name : 'Volcanoes National Park',
-    slug:'masaimara',
+    slug:'volcanoes-national-park',
     img : Volcanoes,
     description: 'Volcanoes National Park lies in north-western Rwanda and borders Virunga National Park',
     DestinationCTA : 'Explore'
@@ -36,11 +35,13 @@ const Top_Destinations =[
     {
     name : 'Lake Kivu',
     img : LakeKivu,
+    slug:'Lake-Kivu',
     description: 'Famous for its large herds of elephants and is the best place to get close to free-ranging elephants worldwide.',
     DestinationCTA : 'Explore'
   },
     {
     name : ' Akagera National Park',
+    slug:'akagera-national-park',
     img : AkageraNationalpark,
     description: "Lake Nakuru is a birdwatcher's paradise and is famous internationally for its thousands and sometimes millions of flamingos",
     DestinationCTA : 'Explore'
@@ -48,6 +49,7 @@ const Top_Destinations =[
   {
     name : ' Nyungwe Forest National Park',
     img : Nyungwe,
+    slug:'Nyungwe-Forest-National-Park',
     description: 'Remarkable, remote, unspoiled terrain and rugged nature. The park is picturesque due to its diverse nature',
     DestinationCTA : 'Explore'
   }
@@ -119,8 +121,6 @@ const rwanda = () => {
         ))}
       </div>
     </div>
-
-    <TopPackages />
   </section>
 </>
 
