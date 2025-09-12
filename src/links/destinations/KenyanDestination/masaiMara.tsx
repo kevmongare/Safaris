@@ -5,12 +5,18 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // fallback for older versions
 
 //top destinations
-import masai from  '../../../assets/masai-mara-wildlife.jpg'
-import LakeNakuru from '../../../assets/Kenya/Lakenakuru/The-Wonders-of-Lake-Nakuru-National-Park--750x389.jpg'
-import Amboseli from '../../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Amboseli-National-Park-1024x683.webp'
-import Meru from '../../../assets/Kenya/Meru/images (2).jpeg'
-import Diani from '../../../assets/Kenya/Diani/diani-sunbeds-1.jpg'
-import Nairobi from '../../../assets/Kenya/Nairobi/Nairobi-National-Park-700x450-1.jpg'
+// import masaiMara from  '../../../links/destinations/KenyanDestination/Pictures/MasaiMara.jpg'
+import MeruNLP from '../../../links/destinations/KenyanDestination/Pictures/Meru.jpg'
+import LakeNakuru from '../../../links/destinations/KenyanDestination/Pictures/LakeNakuru.jpg'
+import TsavoWest from '../../../links/destinations/KenyanDestination/Pictures/TsavoWest.jpg'
+import TsavoEast from '../../../links/destinations/KenyanDestination/Pictures/TsavoEast.jpg'
+import Amboseli from '../../../links/destinations/KenyanDestination/Pictures/Amboseli.jpg'
+import NairobiNLP from '../../../links/destinations/KenyanDestination/Pictures/NNLP.jpg'
+import LakeNaivasha from '../../../links/destinations/KenyanDestination/Pictures/LakeNaivasha.webp'
+import AberdareNLP from '../../../links/destinations/KenyanDestination/Pictures/Aberdare.jpg'
+import SamburuNLP from '../../../links/destinations/KenyanDestination/Pictures/Samburu.jpg'
+
+
 
 // slider
 import elephant from '../../../assets/elephant.avif';
@@ -36,43 +42,78 @@ const whatToExpect = "The Masai Mara Game Reserve is one of the best places in A
 
 const SimilarTopDestinations ="Other Top Destinations in Kenya"
 const Top_Destinations =[
-  {
-    name : 'Masai Mara',
-    slug:'kenya',
-    img : masai,
+
+  // {
+  //   name : 'Masai Mara',
+  //   slug:'masaimara',
+  //   img : masaiMara,
+  //   description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+  //   DestinationCTA : 'Explore'
+  // },
+   {
+    name : 'Meru National Park',
+    slug:'merunationalPark',
+    img : MeruNLP,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Amboseli',
-    img : Amboseli,
+    name : 'Lake Nakuru',
+    slug:'lakenakuru',
+    img : LakeNakuru,
     description: 'Famous for its large herds of elephants and is the best place to get close to free-ranging elephants worldwide.',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Lake Nakuru National Park',
-    img : LakeNakuru,
+    name : 'Tsavo West',
+    slug:'tsavowest',
+    img : TsavoWest,
     description: "Lake Nakuru is a birdwatcher's paradise and is famous internationally for its thousands and sometimes millions of flamingos",
     DestinationCTA : 'Explore'
   },
   {
-    name : 'Meru National Park',
-    img : Meru,
+    name : 'Tsavo East',
+    slug:'tsavoeast',
+    img : TsavoEast,
     description: 'Remarkable, remote, unspoiled terrain and rugged nature. The park is picturesque due to its diverse nature',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Diani',
-    img : Diani,
+    name : 'Amboseli',
+    slug:'AmboseliNatioinalPark',
+    img : Amboseli,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Nairobi National Park',
-    img : Nairobi,
+    slug:'NairobiNP',
+    img : NairobiNLP,
+    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+    DestinationCTA : 'Explore'
+  },
+  {
+    name : 'Lake Naivasha',
+    slug:'lakenaivasha',
+    img : LakeNaivasha,
+    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+    DestinationCTA : 'Explore'
+  },
+  {
+    name : 'Aberdare National Park',
+    slug:'aberdarenationalpark',
+    img : AberdareNLP,
+    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+    DestinationCTA : 'Explore'
+  },
+  {
+    name : 'Samburu National Park',
+    slug:'Samburu-National-Park',
+    img : SamburuNLP,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   }
+
 ]
 const Activities =[
   {
