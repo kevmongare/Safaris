@@ -1,4 +1,5 @@
 // src/components/Destinations.js
+import { Link } from 'react-router-dom';
 import SafariTruck from '../assets/safaris.jpeg'
 import Safari from '../assets/safaris.webp'
 import wildlife from '../assets/elephant.avif'
@@ -9,13 +10,14 @@ const Destinations = () => {
       id: 1,
       name: "Serengeti National Park",
       location: "Tanzania",
-       
+       slug:'serengeti',
       description: "Witness the Great Migration and experience the quintessential African safari.",
       image: SafariTruck
     },
     {
       id: 2,
       name: "Maasai Mara",
+      slug:'masaimara',
       location: "Kenya",
       
       description: "Home to the Big Five and the spectacular wildebeest migration crossing.",
@@ -23,9 +25,9 @@ const Destinations = () => {
     },
     {
       id: 3,
-      name: "Okavango Delta",
-      location: "Botswana",
-      
+      name: "Kibale Forest National Park",
+      location: "Uganda",
+      slug:'kibale-national-park',
       description: "Explore the world's largest inland delta with unique water-based safaris.",
       image: wildlife
     }
@@ -61,9 +63,12 @@ const Destinations = () => {
                 <p className="text-gray-600 mb-2">{destination.location}</p>
                 {/* <p className="text-[var(--secondary)] font-semibold mb-3">{destination.price}</p> */}
                 <p className="text-gray-600 mb-4">{destination.description}</p>
+                <Link 
+                to={`/${destination.slug}`}>
                 <button className="border-2 border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-white font-medium py-2 px-6 rounded-full transition duration-300">
                   View Package
                 </button>
+                </Link>
               </div>
             </div>
           ))}

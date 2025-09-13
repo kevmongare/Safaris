@@ -75,8 +75,15 @@ import OutBoundHolidays from './links/TravelStyles/outboundHolidays';
 //Experiences
 import Experience from './links/Experience/Experience';
 
-//Packages
-import TenDayEastAfrica from './links/TravelStyles/Packages/EastAfrica/tenDayEastAfrica';
+//Packages Wilderness
+import TenDayEastAfrica from './links/TravelStyles/Packages/WildlifeSafaris/tenDayEastAfrica';
+import EightDaysPureRomance from './links/TravelStyles/Packages/WildlifeSafaris/8DaysPureRomance';
+import EightDaysTrueWilderness from './links/TravelStyles/Packages/WildlifeSafaris/8DaysTrueWilderness';
+import NineDaysBigFive from './links/TravelStyles/Packages/WildlifeSafaris/9DaysBigFiveAdventure';
+import NineDaysTanzania from './links/TravelStyles/Packages/WildlifeSafaris/9DaysTanzaniaBestofNorth';
+import ElevenDaysEpicWilderness from './links/TravelStyles/Packages/WildlifeSafaris/11DaysEpicWildernessAdventure';
+import ElevenDaysTanzaniaBigCats from './links/TravelStyles/Packages/WildlifeSafaris/11DaysTanzaniaBigCatsSafari';
+import TweleveDaysGreateWildlife from './links/TravelStyles/Packages/WildlifeSafaris/12DaysGreatWildlifeEnccounters';
 
 // Layout component for Menu and Footer
 function App() {
@@ -91,9 +98,10 @@ function App() {
              <About />
              <GallerySlider/>
             <TopDestinations />
+            <AboutUs />
             <Hometravelstyles />
             <DestinationHighlights />
-            <AboutUs />
+            
             <Blog />
             
             </>}/>
@@ -151,8 +159,19 @@ function App() {
            <Route path='bushAndBeachSafaris' element = {<BushAndBeachSafaris/>}/>
            <Route path='outBoundHolidyas' element = {<OutBoundHolidays/>}/>
 
-         
+         {/* //Packages Wilderness */}
           <Route path="/tenDayEastAfrica" element={<TenDayEastAfrica/>} />
+          <Route path="/8daysPureRomance" element={<EightDaysPureRomance/>} />
+          <Route path="/8daysTrueWilderness" element={<EightDaysTrueWilderness/>} />
+          <Route path="/9DaysBigFive" element={<NineDaysBigFive/>} />
+          <Route path="/9DaysTanzania" element={<NineDaysTanzania/>} />
+          <Route path="/11daysEpicWilderness" element={<ElevenDaysEpicWilderness/>} />
+          <Route path="/11daysTanzaniaBigCats" element={<ElevenDaysTanzaniaBigCats/>} />
+          <Route path="/12DaysGreateWildlife" element={<TweleveDaysGreateWildlife/>} />
+   
+
+
+
           <Route path="/Experiences" element={<Experience/>} />
           <Route path="/About" element={<AboutPage/>} />
           

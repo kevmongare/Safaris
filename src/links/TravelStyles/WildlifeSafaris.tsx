@@ -7,9 +7,10 @@ import SamburuNationalPark4 from '../../links/TravelStyles/AdventureExpeditions/
 import MountKenya5 from '../../links/TravelStyles/AdventureExpeditions/mtkenya.avif'
 import MaasaiMara6 from '../../links/TravelStyles/AdventureExpeditions/maasai-mara-wildlife.jpg';
 import Ngorongoro7 from '../../links/TravelStyles/AdventureExpeditions/ng-crater-luxury-tanzania-safaris-1.jpg'
-import TarangireNationalPark8 from '../../links/TravelStyles/AdventureExpeditions/Tarangire National Park.webp'
+import TarangireNationalPark8 from '../../links/TravelStyles/Packages/WildlifeSafaris/pictures/3-days-queen-elizabeth-national-park_5_.webp'
 
-import LatestPackages from '../../components/latestPackages';
+
+// import LatestPackages from '../../components/latestPackages';
 
 // const Header = 'AdventureExpeditions'
 const Intro = 'WILDLIFE SAFARIS'
@@ -27,36 +28,42 @@ const Top_Expeditions =[
   },
     {
     name : '8 Days Pure Romance',
+    slug:'8daysPureRomance',
     img : MeruNationalPark2,
     description: 'Nairobi | Meru National Park | Masai Mara Game Reserve | Depart',
     DestinationCTA : 'Explore'
   },
     {
     name : '8 Days True Wilderness',
+    slug:'8daysTrueWilderness',
     img : RedElephantTsavo3,
     description: "Masai Mara Game Reserve | Lake Nakuru National Park | Amboseli National Park | Tsavo West National Park | Depart",
     DestinationCTA : 'Explore'
   },
     {
     name : '9 Days Big Five Adventure',
+    slug:'9DaysBigFive',
     img : SamburuNationalPark4,
     description: 'Nairobi | Samburu National Reserve | Aberdare National Park | Lake Nakuru National Park | Masai Mara Game Reserve | Depart',
     DestinationCTA : 'Explore'
   },
   {
     name : '11 Days Epic Wilderness Adventure',
+    slug:'11daysEpicWilderness',
     img : MountKenya5,
     description: 'Nairobi | Masai Mara Game Reserve | Samburu Game Reserve | Mount Kenya...',
     DestinationCTA : 'Explore'
   },
     {
     name : '12 Days Great Wildlife Enccounters',
+    slug:'12DaysGreateWildlife',
     img : MaasaiMara6,
     description: 'Nairobi National Park | Tsavo East National Park | Amboseli National Park |...',
     DestinationCTA : 'Explore'
   },
     {
     name : '9 Days Tanzania - Best of North',
+    slug:'9DaysTanzania',
     img : Ngorongoro7,
     description: 'Arusha | Tarangire National Park | Ngorongoro Conservation Area | Serengeti National Park | Olduvai Gorge | Depart',
     DestinationCTA : 'Explore'
@@ -64,6 +71,7 @@ const Top_Expeditions =[
   ,
     {
     name : '11 Days Tanzania Big Cats Safari',
+    slug:'11daysTanzaniaBigCats',
     img : TarangireNationalPark8,
     description: 'Arusha | Tarangire National Park | Lake Manyara National Park | Ngorongoro Crater | Serengeti National Park | Depart',
     DestinationCTA : 'Explore'
@@ -114,7 +122,7 @@ const WildlifeSafaris = () =>{
           </div>
       </div>
     </div>
-    <LatestPackages/>
+    {/* <LatestPackages/> */}
 
     </>
   );
