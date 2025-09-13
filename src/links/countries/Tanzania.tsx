@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import masai from  '../../assets/masai-mara-wildlife.jpg'
 import LakeNakuru from '../../assets/Kenya/Lakenakuru/The-Wonders-of-Lake-Nakuru-National-Park--750x389.jpg'
 import Amboseli from '../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Amboseli-National-Park-1024x683.webp'

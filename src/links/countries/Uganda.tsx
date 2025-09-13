@@ -7,8 +7,8 @@ import LakeMburo from '../../links/countries/ugandaimages/Lake-Mburo-28329-scale
 import Mgahinga from'../../links/countries/ugandaimages/Uganda-Kibale-National-Park-1658360984.jpg'
 import Semliki from '../../links/countries/ugandaimages/book-gorilla-tracking-visit-Uganda-semuliki-hot-springs3.jpg'
 import Kidepo from'../../links/countries/ugandaimages/elephant-on-the-plains-kidepo-valley-national-park.jpg'
-import TopPackages from '../../components/TopPackages';
-// import { BsPeopleFill } from "react-icons/bs";
+// import TopPackages from '../../components/TopPackages';
+// // import { BsPeopleFill } from "react-icons/bs";
 
 
 import 'swiper/swiper-bundle.css'; 
@@ -31,49 +31,57 @@ const p1 = 'Uganda is a land of stunning contrasts — rolling green hills, snow
 const Top_Destinations =[
   {
     name : 'Murchison Falls National Park',
-    slug:'masaimara',
+    slug:'murchison-falls',
     img :Murchison,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Queen Elizabeth National Park',
+    slug:'queen-elizabeth-national-park',
     img : Lions,
     description: 'Famous for its large herds of elephants and is the best place to get close to free-ranging elephants worldwide.',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Bwindi Impenetrable Forest',
-     img : bwindi,
+     slug:'Bwindi-Impenetrable-Forest',
+
+    img : bwindi,
     description: "Lake Nakuru is a birdwatcher's paradise and is famous internationally for its thousands and sometimes millions of flamingos",
     DestinationCTA : 'Explore'
   },
   {
     name : 'Kibale Forest National Park',
+     slug:'kibale-national-park',
     img : Kibale,
     description: 'Remarkable, remote, unspoiled terrain and rugged nature. The park is picturesque due to its diverse nature',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Lake Mburo',
+     slug:'Lake-Mburo',
     img : LakeMburo,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Mgahinga Gorilla National Park',
+     slug:'Mgahinga-Gorilla-National-Park',
     img : Mgahinga,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Semliki National Park',
+     slug:'Semliki-National-Park',
     img : Semliki,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
     name : 'Kidepo Valley National Park',
+     slug:'Kidepo-Valley-National-Park',
     img : Kidepo,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
@@ -147,7 +155,7 @@ const Uganda = () => {
       </div>
     </div>
 
-    <TopPackages />
+    
   </section>
 
 

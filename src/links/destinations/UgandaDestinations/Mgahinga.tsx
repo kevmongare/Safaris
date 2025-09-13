@@ -5,12 +5,16 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // fallback for older versions
 
 //top destinations
-import masai from  '../../../assets/masai-mara-wildlife.jpg'
-import LakeNakuru from '../../../assets/Kenya/Lakenakuru/The-Wonders-of-Lake-Nakuru-National-Park--750x389.jpg'
-import Amboseli1 from '../../../assets/Kenya/Amboseli/Alone-Maasai-Warrior-at-Amboseli-National-Park-1024x683.webp'
-import Meru from '../../../assets/Kenya/Meru/images (2).jpeg'
-import Diani from '../../../assets/Kenya/Diani/diani-sunbeds-1.jpg'
-import Nairobi from '../../../assets/Kenya/Nairobi/Nairobi-National-Park-700x450-1.jpg'
+import Murchison from  '../../../links/countries/ugandaimages/murchison-falls.jpg'
+import Lions from '../../../links/countries/ugandaimages/lions.jpeg'
+import bwindi from '../../../links/countries/ugandaimages/bwindi.jpeg'
+import Kibale from '../../../links/countries/ugandaimages/Uganda.jpg'
+import LakeMburo from '../../../links/countries/ugandaimages/Lake-Mburo-28329-scaled.jpg'
+// import Mgahinga from'../../../links/countries/ugandaimages/Uganda-Kibale-National-Park-1658360984.jpg'
+import Semliki from '../../../links/countries/ugandaimages/book-gorilla-tracking-visit-Uganda-semuliki-hot-springs3.jpg'
+import Kidepo from'../../../links/countries/ugandaimages/elephant-on-the-plains-kidepo-valley-national-park.jpg'
+// import TopPackages from '../../components/TopPackages';
+// // import { BsPeopleFill } from "react-icons/bs";
 
 // slider
 import elephant from '../../../assets/elephant.avif';
@@ -27,7 +31,7 @@ import 'yet-another-react-lightbox/styles.css';
 
 const images = [savanah, cheeta, elephant, Birds, HotairBalloon, WilderBeast];
 // info(text data)
-const Header = 'Mgahinga Gorilla National Park'
+const Header = 'Bwindi Impenetrable Forest'
 const Paragraph = "Masai Mara National Reserve is considered a “must see” for any visitor traveling on safari in Kenya. It is on the “to do” list of most Kenyan visitors because the park is graced by a wide variety of unique and exquisite wild life and birds.Masai Mara is the best place to see all of the “Big Five” animals (elephants, lions, leopards, rhinos and buffalo) together. The famous wildebeest migration also takes place at the Mara."
 const Paragraph1 ="Masai Mara National Reserve (also known as Masai Mara or The Mara) is situated within the Great Rift Valley in the southernpart of Kenya. Measuring approximately 1510sq. ilometres (approx. 938sq. miles) in size, this unfenced savannah grassland is roughly 150 miles southeast of Nairobi.Maasai Mara derives its name from the indigenous people of Kenya – the Maasai tribe – and the Mara River that cuts through the park."
 // const Paragraph2 ="The Masai Mara provides the best view of the famous wildebeest migration as the animals cross the Mara River between July and August.The Mara is also home to the richest concentration of wildlife, including the “Big Five” (elephants, lions, leopards, rhinos, and buffalo), zebras, antelope, gnus, Oribis, hyenas, giraffes, warthogs, gazelles, hartebeests, hippos, crocodiles and others. The park has the largest concentration of African lions, including the black-maned lion.Birdlife is as plentiful as wildlife at the Masai Mara, which boasts over 400 different birds species. The park experiences a hot and dry climate with a regular rainfall season twice a year. The reserve’s topography is mainly open savannah (grassland) with clusters of acacia trees along the southeastern area of the park. The Mara and Talek rivers grace the rolling plains of the reserve. Myriad seasonal rivers appear during the rainy season but dry out once the rains are gone. Maasai Mara National Reserve does not fall under the jurisdiction of the Kenya Wildlife Service (KWS); instead, it is managed by the local county council of Narok district"
@@ -36,39 +40,59 @@ const whatToExpect = "The Masai Mara Game Reserve is one of the best places in A
 const SimilarTopDestinations ="Other Top Destinations in Kenya"
 const Top_Destinations =[
   {
-    name : 'Amboseli',
-    slug:'kenya',
-    img : masai,
+    name : 'Murchison Falls National Park',
+    slug:'murchison-falls',
+    img :Murchison,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Amboseli',
-    img : Amboseli1,
+    name : 'Queen Elizabeth National Park',
+    slug:'queen-elizabeth-national-park',
+    img : Lions,
     description: 'Famous for its large herds of elephants and is the best place to get close to free-ranging elephants worldwide.',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Lake Nakuru National Park',
-    img : LakeNakuru,
+    name : 'Bwindi Impenetrable Forest',
+     slug:'Bwindi-Impenetrable-Forest',
+
+    img : bwindi,
     description: "Lake Nakuru is a birdwatcher's paradise and is famous internationally for its thousands and sometimes millions of flamingos",
     DestinationCTA : 'Explore'
   },
   {
-    name : 'Meru National Park',
-    img : Meru,
+    name : 'Kibale Forest National Park',
+     slug:'kibale-national-park',
+    img : Kibale,
     description: 'Remarkable, remote, unspoiled terrain and rugged nature. The park is picturesque due to its diverse nature',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Diani',
-    img : Diani,
+    name : 'Lake Mburo',
+     slug:'Lake-Mburo',
+    img : LakeMburo,
+    description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+    DestinationCTA : 'Explore'
+  },
+  //   {
+  //   name : 'Mgahinga Gorilla National Park',
+  //    slug:'Mgahinga-Gorilla-National-Park',
+  //   img : Mgahinga,
+  //   description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
+  //   DestinationCTA : 'Explore'
+  // },
+    {
+    name : 'Semliki National Park',
+     slug:'Semliki-National-Park',
+    img : Semliki,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   },
     {
-    name : 'Nairobi National Park',
-    img : Nairobi,
+    name : 'Kidepo Valley National Park',
+     slug:'Kidepo-Valley-National-Park',
+    img : Kidepo,
     description: 'The Masai Mara is regarded as the Jewel of Kenya wildlife',
     DestinationCTA : 'Explore'
   }
